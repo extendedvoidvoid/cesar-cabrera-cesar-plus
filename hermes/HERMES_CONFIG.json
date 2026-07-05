@@ -1,0 +1,39 @@
+{
+  "agent_name": "Hermes",
+  "venture": "CraftCut (César+ Start-up)",
+  "system_prompt_file": "../AGENT_PROMPT.md",
+  "language_rules": {
+    "station_f": "fr",
+    "hec_paris": "fr",
+    "byteplus": "en",
+    "microsoft": "en",
+    "google_cloud": "en",
+    "aws": "en"
+  },
+  "content_sources": [
+    "../PITCH_DECK.md",
+    "../TECHNICAL_CASE.md",
+    "../STATION_F_STRATEGY.md",
+    "../STATION_F_APPLICATION_FR.md",
+    "../COMPANY_APPLICATIONS.md"
+  ],
+  "ip_protection": {
+    "never_disclose": [
+      "local folder paths",
+      "repository file maps",
+      "script names",
+      "raw code snippets",
+      "database schemas"
+    ],
+    "always_frame_as": [
+      "Industrial Vertical Video Printing Press",
+      "local-cloud hybrid architecture",
+      "Dynamic Word-Bounding Algorithm",
+      "64.3M tokens/month"
+    ]
+  },
+  "test_directives": {
+    "elevator_pitch_max_chars": 150,
+    "tone": "Future 40 DeepTech — systems architect + Parisian creative director"
+  }
+}
