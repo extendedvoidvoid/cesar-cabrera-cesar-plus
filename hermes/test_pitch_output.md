@@ -24,9 +24,9 @@
 
 ## Test 2 — Elevator Pitch EN (≤150 chars)
 
-> Sovereign vertical press: CraftCut compiles heritage, fashion, and artisan craft into hi-fi 9:16 essays, distributed across hundreds of targeted channels.
+> Demanding-brand AI video: CraftCut automates premium motion design for labels, brands & heritage — cloud-deployment ready.
 
-**Longueur :** 143 caractères ✓
+**Longueur :** 119 caractères ✓
 
 ---
 
