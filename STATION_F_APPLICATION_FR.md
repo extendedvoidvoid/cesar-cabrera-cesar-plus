@@ -9,9 +9,9 @@
 
 ## 1. Pitch éclair (150 caractères)
 
-> Presse verticale souveraine : CraftCut compile patrimoine, mode et geste artisanal en essais 9:16 haute fidélité, distribués sur centaines de chaînes ciblées.
+> Montage vidéo IA exigeant : CraftCut automatise le motion design premium pour marques, labels et patrimoine — prêt au déploiement cloud.
 
-*(149 caractères)*
+*(134 caractères)*
 
 ---
 
@@ -23,42 +23,47 @@
 | **Fondateur** | César |
 | **Statut juridique** | Auto-entrepreneur (Micro-Entreprise), France |
 | **Localisation** | Paris, France |
-| **Stade** | MVP fonctionnel — site live, moteur de compilation opérationnel en local |
+| **Stade** | MVP fonctionnel — site live, pipeline validé, prêt au déploiement cloud |
 
 ---
 
 ## 3. Décrivez votre projet en quelques phrases
 
-**CraftCut** est une infrastructure souveraine de génération et de distribution de médias verticaux, développée à Paris. Fonctionnant comme une **« Presse Gutenberg de l'ère verticale »**, notre moteur propriétaire compile des variables culturelles, artistiques et historiques pour produire des essais vidéo 9:16 haute fidélité à variations infinies.
+**CraftCut** est une infrastructure d'**automatisation vidéo par IA** qui fonctionne enfin pour les **marques exigeantes** — celles qui doivent respecter un cahier des charges élevé en motion design, typographie et rythme éditorial. Développée à Paris, notre plateforme synthétise ce qui se fait de mieux en design motion : calage beat-sync, contrôle total des sous-titres, zones de sécurité mobiles, grain organique — le tout industrialisé pour le format 9:16.
 
-En animant des actifs visuels d'exception — pochettes animées Apple Music, archives de haute couture, plans d'architecte, et le geste noble des **Ouvriers de France** — selon un montage cinétique rythmé par l'audio et un calage typographique de précision, nous automatisons et distribuons des centaines de chaînes thématiques ciblées en parallèle sur TikTok, YouTube et Instagram.
+Notre **porte d'entrée** est la **pop culture et la couverture d'album** : un vecteur naturel pour engager artistes et labels, avant d'élargir vers des **podcasts ciblés jeunesse** en phase 2. En parallèle, CraftCut forme un **duo complémentaire** avec de vrais reportages hebdomadaires — notamment autour de l'architecture et des **Ouvriers de France** — et alimente chaque jour des vidéos courtes qui **développent** les informations clés et les messages de marque, pour **fidéliser** l'audience au quotidien.
 
-Contrairement aux générateurs d'IA génériques qui produisent du contenu répétitif (« AI slop »), CraftCut maintient des standards esthétiques dignes de la diffusion Canal+ : typographie suisse, zones de sécurité mobiles, et souveraineté technologique totale via une architecture hybride local-cloud.
+Contrairement aux générateurs d'IA génériques (« AI slop »), CraftCut impose une **souveraineté créative totale** : chaque sortie respecte les standards d'une diffusion premium, avec un pipeline **prêt au déploiement cloud** pour scaler sans compromis esthétique.
 
 ---
 
 ## 4. Quel problème résolvez-vous ?
 
-En 2026, la dilution de la prestige des marques et la rétention des audiences sont menacées par le spam vidéo généré par IA de basse fidélité. Les créateurs, les maisons de luxe et les institutions culturelles françaises ne disposent pas d'un outil industriel capable de :
+En 2026, les marques exigeantes, les labels et les institutions culturelles françaises font face à trois blocages :
 
-1. **Préserver l'excellence esthétique** (typographie, rythme, grain organique) à l'échelle de centaines de chaînes simultanées.
-2. **Valoriser le patrimoine artisanal français** — les mains, les gestes, les savoir-faire régionaux — face à la standardisation algorithmique.
-3. **Exporter la culture française** vers sept marchés linguistiques (FR, DE, ES, IT, PT, LV, EN) sans sacrifier la qualité de diffusion.
+1. **Le montage vidéo IA ne tient pas le cahier des charges.** Les outils génériques produisent du contenu répétitif, mal typographié, incompatible avec les standards motion design des maisons premium.
+2. **L'engagement quotidien manque de structure.** Entre un reportage hebdomadaire de fond et le flux social, il n'existe pas de couche intermédiaire — des vidéos courtes qui **développent** chaque jour les messages importants et maintiennent la fidélité de l'audience.
+3. **La traduction internationale fragilise les comptes officiels.** Les marques hésitent à publier en plusieurs langues sur leurs pages principales, par peur de **diluer leurs stats** (followers, likes, engagement). Elles n'ont pas de stratégie pour toucher l'Europe sans sacrifier leur identité numérique.
 
-CraftCut résout ces trois contraintes par une presse d'impression vidéo verticale autonome, conçue pour l'ère mobile 9:16.
+CraftCut résout ces trois contraintes : **automatisation vidéo IA qui respecte enfin les exigences créatives**, rythme éditorial quotidien en complément des reportages, et **pages satellites** pour l'internationalisation sans toucher aux comptes officiels.
 
 ---
 
 ## 5. Quelle est votre solution / produit ?
 
-CraftCut est un pipeline industriel en quatre piliers :
+CraftCut **industrialise l'excellence du motion design** par l'IA — pas une recette technique, mais une **promesse créative tenue** :
 
-| Pilier | Description |
-| :--- | :--- |
-| **Pipeline de sourcing autonome** | Surveillance et mise en cache d'actifs motion haute résolution (pochettes animées, registres de design), rejet des placeholders statiques. |
-| **Grille de localisation temporelle** | Algorithmes de bornage dynamique des mots par langue (allemand : 85 mots, langues romanes : 120 mots) pour maintenir chaque sortie vocale sous le seuil vertical de 60 secondes. |
-| **Synthétiseur typographique CraftCut** | Purification programmatique des glyphes ASS/SSA, calage des sous-titres dans les zones de sécurité mobiles, signature broadcast « CESAR+ ». |
-| **Compilateur hybride local-cloud** | Rendu zéro-coût via encodeurs matériels Apple Silicon (`hevc_videotoolbox` sur M3 Max), montée en charge horizontale sur clusters cloud (Google Cloud Run) pour 350 vidéos localisées par jour. |
+**Nous avons synthétisé ce qui se fait de mieux en design motion** — rythme cinétique, compositions typographiques suisses, transitions beat-sync, grain organique — et l'avons encapsulé dans un moteur d'automatisation qui **impose le respect du cahier des charges** à chaque sortie. Le **contrôle total des sous-titres** (calage, glyphes, zones de sécurité, zéro collision UI) garantit une lisibilité broadcast sur mobile, là où les concurrents échouent.
+
+**Notre modèle éditorial en duo :**
+- **Reportages hebdomadaires** (terrain, architecture, Ouvriers de France, coulisses de marque) — le fond, l'authenticité, la crédibilité.
+- **Vidéos quotidiennes de développement** — chaque jour, des formats courts qui **approfondissent** un message, une actualité, un détail de l'univers de marque, pour **fidéliser** sans lasser.
+
+**Notre modèle d'internationalisation intelligent :**
+- **Traduction et clonage vocal** dans toutes les langues parlées en Europe — une même voix, une même intention, adaptée localement.
+- **Si la marque refuse de diluer ses stats** sur ses comptes officiels, nous proposons des **pages « fan » ou « satellites »** : des comptes dédiés qui viennent **appuyer** le message de la marque, son passé et son actualité, de manière **créative et journalière**, sans cannibaliser l'engagement du compte principal.
+
+Le pipeline est **validé et prêt au déploiement cloud** — orchestration multi-agents, rendu parallèle, montée en charge horizontale sur infrastructure enterprise (Google Cloud Run, Azure AKS, AWS Fargate).
 
 **Volume opérationnel cible :** 50 campagnes culturelles quotidiennes × 7 langues = **350 vidéos verticales finalisées par jour**, soit **64,3 millions de tokens LLM par mois**.
 
@@ -69,32 +74,32 @@ CraftCut est un pipeline industriel en quatre piliers :
 ### Alignement avec l'Incubateur HEC Paris
 L'Incubateur HEC valorise les projets à l'intersection du **design, de la tech et du patrimoine culturel**. CraftCut incarne cette triple mission :
 
-- **Pilier 1 — Creative-Tech & prestige esthétique :** Nous combattons le « AI slop » par des layouts typographiques stricts, un rythme cinétique et une curation motion-art de niveau broadcast.
-- **Pilier 2 — Ouvriers de France & héritage français :** Mission culturelle profonde : mettre en lumière les mains derrière l'artisanat français et exporter cette excellence vers des audiences mondiales en sept langues.
-- **Pilier 3 — Agilité auto-entrepreneur :** Statut lean qui permet d'itérer rapidement sur des workflows hybrides local-cloud à coût quasi nul, tout en atteignant des standards de diffusion professionnels.
+- **Pilier 1 — Creative-Tech & prestige esthétique :** Nous prouvons que le montage vidéo IA peut enfin servir les marques exigeantes — motion design premium, typographie suisse, rythme éditorial broadcast.
+- **Pilier 2 — Ouvriers de France & reportages :** En duo avec de vrais reportages hebdomadaires, nos vidéos quotidiennes mettent en lumière le geste artisanal, l'architecture et l'actualité des marques — fidélisation par le développement progressif des messages.
+- **Pilier 3 — Agilité auto-entrepreneur :** Statut lean, pipeline validé, prêt au scale cloud — coûts de développement maîtrisés, time-to-market immédiat.
 
 ### Alignement avec le Founders Program
 Le jury du Founders Program recherche un **MVP fonctionnel, une scalabilité claire et un fondateur passionné**. Nous apportons :
 
 - Site showcase live (GitHub Pages) démontrant des boucles vidéo réelles (Chanel, Olivia Rodrigo, Kanye West).
-- Moteur de compilation opérationnel sur Apple Silicon M3 Max.
-- Automatisation des candidatures cloud (BytePlus, Azure, Google Cloud, AWS) via agents souverains.
-- Modèle économique de **presse multicanale** — pas un simple outil SaaS, mais une machine de distribution à variables infinies.
+- Pipeline d'automatisation opérationnel, **prêt au déploiement cloud**.
+- Stratégie go-to-market claire : pop culture & couvertures d'album → labels & artistes → podcasts jeunesse.
+- Modèle de pages satellites pour l'internationalisation sans dilution des stats officielles.
 
 ---
 
 ## 7. Marché cible & modèle économique
 
 ### Marché cible
-- **Maisons de luxe françaises** cherchant à scaler leur présence verticale sans diluer leur identité visuelle.
-- **Institutions culturelles** (ministères, fondations patrimoniales) exportant l'artisanat régional.
-- **Éditeurs musicaux & labels** transformant leurs pochettes animées en campagnes TikTok natives.
-- **Créateurs premium** opérant des réseaux de chaînes thématiques de niche à haute rétention.
+- **Labels & artistes** — porte d'entrée via pop culture et couvertures d'album ; extension vers podcasts ciblés jeunesse.
+- **Maisons de luxe & marques exigeantes** — automatisation vidéo IA respectant un cahier des charges motion design élevé.
+- **Institutions culturelles & médias** — duo reportages hebdomadaires + vidéos quotidiennes de développement (architecture, Ouvriers de France).
+- **Marques internationales** — traduction + clonage vocal européen via pages satellites, sans toucher aux comptes officiels.
 
 ### Modèle économique (phase MVP → scale)
-1. **Phase 1 (2026) :** Production propriétaire de centaines de chaînes verticales de niche (revenus publicitaires, partenariats culturels).
-2. **Phase 2 (post-admission Station F) :** Licences B2B aux maisons et institutions — pipeline white-label « Presse verticale souveraine ».
-3. **Phase 3 (2027+) :** API d'orchestration pour agences et médias, facturation au volume de compilation (tokens + rendu GPU).
+1. **Phase 1 (2026) — Pop culture & labels :** Couvertures d'album et univers artistiques comme vecteur d'entrée ; production de chaînes verticales de niche à haute rétention.
+2. **Phase 2 (2026–2027) — B2B marques & institutions :** Licences pipeline white-label (automatisation + pages satellites + clonage vocal) ; reportages hebdomadaires en duo avec flux quotidien.
+3. **Phase 3 (2027+) — Podcasts jeunesse & API :** Extension vers formats longs ciblés jeunesse ; API d'orchestration pour agences et médias, facturation au volume.
 
 ---
 
@@ -102,10 +107,10 @@ Le jury du Founders Program recherche un **MVP fonctionnel, une scalabilité cla
 
 **César** — Fondateur, architecte système & directeur créatif.
 
-- Conception et déploiement du pipeline CraftCut complet (sourcing, localisation, typographie, compilation).
-- Expertise en montage cinétique beat-sync, typographie ASS/SSA, et encodage HEVC matériel.
-- Statut auto-entrepreneur : agilité maximale, coûts de développement proches de zéro.
-- Vision : combiner l'autorité technique d'un architecte systèmes (Future 40 / DeepTech) avec la sensibilité esthétique d'un directeur créatif parisien.
+- Conception et déploiement du pipeline CraftCut complet — de l'automatisation motion design au contrôle typographique et au clonage vocal multilingue.
+- Expertise en montage cinétique beat-sync, typographie ASS/SSA, et orchestration cloud.
+- Statut auto-entrepreneur : agilité maximale, pipeline validé, prêt au scale.
+- Vision : prouver que l'IA vidéo peut enfin servir les marques exigeantes — avec la sensibilité esthétique d'un directeur créatif parisien.
 
 ---
 
@@ -116,7 +121,7 @@ Le jury du Founders Program recherche un **MVP fonctionnel, une scalabilité cla
 | **Site MVP live** | https://extendedvoidvoid.github.io/atelier-synesthesie/ |
 | **Dépôt public** | github.com/extendedvoidvoid/atelier-synesthesie |
 | **Vidéos de démonstration** | Boucles 9:16 réelles intégrées au site (Chanel Marseille, Olivia Rodrigo, Kanye West Graduation) |
-| **Pipeline local** | Compilation HEVC opérationnelle sur M3 Max |
+| **Pipeline validé** | Automatisation motion design opérationnelle, prête au déploiement cloud |
 | **Automatisation** | Agents de remplissage de formulaires cloud déployés |
 | **Candidatures cloud** | BytePlus vStart, Microsoft Founders Hub, Google Cloud, AWS Activate — en cours de soumission |
 
@@ -132,7 +137,7 @@ Cette charge justifie des crédits startup de niveau entreprise :
 
 | Fournisseur | Usage prévu | Crédit cible |
 | :--- | :--- | :--- |
-| **BytePlus** | Voice AI, ModelArk, VikingDB, intégration TikTok | $2 000 → $100 000 |
+| **BytePlus** | Voice AI, clonage vocal, ModelArk, intégration TikTok | $2 000 → $100 000 |
 | **Microsoft Azure** | Azure OpenAI (GPT-4o), AKS, Storage Blobs | $1 000 → $25 000 (via HAL Station F) |
 | **Google Cloud** | Vertex AI (Gemini), Cloud Run, BigQuery | $2 000 → $25 000 (via HAL Station F) |
 | **AWS** | Bedrock, SageMaker GPU, Fargate, S3 | $1 000 → $25 000 (via HAL Station F) |
@@ -144,10 +149,10 @@ Cette charge justifie des crédits startup de niveau entreprise :
 ## 11. Vision à 12 mois
 
 ```text
-T1 2026 — Admission Station F + crédits cloud initiaux
-T2 2026 — 350 vidéos/jour en production, 7 langues, 50 campagnes culturelles
-T3 2026 — Premiers partenariats maisons de luxe via réseau Station F
-T4 2026 — Migration rendu parallèle Cloud Run, API white-label B2B
+T1 2026 — Admission Station F + crédits cloud + déploiement pipeline cloud
+T2 2026 — 350 vidéos/jour, pop culture & labels comme porte d'entrée
+T3 2026 — Premiers partenariats marques (pages satellites + clonage vocal EU)
+T4 2026 — Extension podcasts jeunesse + reportages hebdomadaires en duo
 ```
 
 ---
@@ -155,13 +160,13 @@ T4 2026 — Migration rendu parallèle Cloud Run, API white-label B2B
 ## 12. Réponses courtes pour champs de formulaire
 
 ### « En une phrase, que fait votre startup ? »
-> CraftCut est une presse d'impression vidéo verticale souveraine qui compile patrimoine, mode et artisanat français en essais 9:16 haute fidélité, distribués sur centaines de chaînes ciblées.
+> CraftCut automatise le montage vidéo IA premium pour marques exigeantes — motion design, sous-titres maîtrisés, traduction vocale européenne via pages satellites.
 
 ### « Quelle est votre innovation ? »
-> Architecture hybride local-cloud avec algorithmes de bornage dynamique multilingue et synthétiseur typographique ASS — le premier moteur industriel à scaler la qualité Canal+ sur le format mobile 9:16.
+> Le premier moteur d'automatisation vidéo IA qui impose le respect du cahier des charges motion design — en duo avec reportages terrain, et internationalisation par pages satellites sans diluer les stats officielles.
 
 ### « Pourquoi vous ? »
-> Seul fondateur ayant conçu et déployé l'intégralité du pipeline — du sourcing autonome au rendu HEVC matériel — avec un MVP live et une mission culturelle alignée sur les priorités de souveraineté numérique française.
+> Fondateur-architecte ayant conçu et validé l'intégralité du pipeline — du motion design automatisé au clonage vocal multilingue — avec un MVP live et une stratégie go-to-market claire : pop culture → labels → podcasts jeunesse.
 
 ### « Lien vers votre produit / démo »
 > https://extendedvoidvoid.github.io/atelier-synesthesie/

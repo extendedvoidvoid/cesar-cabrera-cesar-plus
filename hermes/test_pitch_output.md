@@ -16,9 +16,9 @@
 
 ## Test 1 — Elevator Pitch FR (≤150 chars)
 
-> Presse verticale souveraine : CraftCut compile patrimoine, mode et geste artisanal en essais 9:16 haute fidélité, distribués sur centaines de chaînes ciblées.
+> Montage vidéo IA exigeant : CraftCut automatise le motion design premium pour marques, labels et patrimoine — prêt au déploiement cloud.
 
-**Longueur :** 149 caractères ✓
+**Longueur :** 134 caractères ✓
 
 ---
 
