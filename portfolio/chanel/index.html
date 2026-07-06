@@ -175,6 +175,67 @@
       background: var(--surface);
     }
 
+    .case-study { background: var(--surface); margin: 0 -28px; padding: 56px 28px; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+    .case-meta {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .case-meta span { padding: 4px 10px; border: 1px solid var(--hairline); background: var(--canvas); }
+    .acts { display: grid; gap: 32px; margin-top: 32px; }
+    .act {
+      padding: 24px 0;
+      border-top: 1px solid var(--hairline);
+    }
+    .act:first-child { border-top: none; padding-top: 0; }
+    .act-head {
+      display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .act-num {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em;
+      color: var(--accent);
+    }
+    .act-title {
+      font-family: var(--display);
+      font-size: 22px; font-weight: 400; margin: 0;
+    }
+    .act-pace {
+      font-family: var(--mono); font-size: 10px;
+      color: var(--muted); margin-left: auto;
+    }
+    .beats {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    .beats li {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--muted);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .beats li:last-child { border-bottom: none; }
+    .beats .time {
+      font-family: var(--mono); font-size: 11px;
+      color: var(--accent);
+    }
+    .beats strong { color: var(--ink); font-weight: 500; }
+    .insight-box {
+      margin-top: 28px;
+      padding: 20px 24px;
+      border-left: 3px solid var(--accent);
+      background: var(--canvas);
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .insight-box em { font-family: var(--display); font-style: italic; color: var(--ink); font-size: 18px; }
+
     .cta-block { text-align: center; padding: 64px 0 80px; }
     .cta-block p { color: var(--muted); max-width: 40ch; margin: 0 auto 24px; }
     .btn {
@@ -209,6 +270,7 @@
       <a href="../../index.html" class="brand">César Cabrera</a>
       <ul class="links">
         <li><a href="#work">Œuvres</a></li>
+        <li><a href="#case-study">Case study</a></li>
         <li><a href="#profile">Profil</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -296,6 +358,75 @@
       </div>
     </section>
 
+    <section id="case-study" class="case-study">
+      <p class="section-kicker">Concept personnel · Spec</p>
+      <h2>« Absence » — film parfum</h2>
+      <p class="section-intro">
+        Marque fictive <strong>Maison L.</strong> — hommage au mécanisme de la mémoire olfactive
+        (sans référence au récit de <em>Le Parfum</em>). Une femme qui a tout réussi sauf sentir.
+      </p>
+      <div class="case-meta">
+        <span>30–45 s</span>
+        <span>Parfums & Beauté</span>
+        <span>Film · Social · Print</span>
+        <span>Concept César Cabrera</span>
+      </div>
+
+      <div class="insight-box">
+        <em>Insight :</em> le parfum ne comble pas le vide — il prouve que l'émotion n'a jamais disparu,
+        seulement été rangée hors de portée du regard.
+      </div>
+
+      <div class="acts">
+        <article class="act">
+          <div class="act-head">
+            <span class="act-num">Acte I</span>
+            <h3 class="act-title">Les misères du réel</h3>
+            <span class="act-pace">Montage rapide · 18–22 coupes · ~18 s</span>
+          </div>
+          <ul class="beats">
+            <li><span class="time">0:00</span><span><strong>Bureau, lumière froide.</strong> Signature validée. Applaudissements en off. Son étouffé. Elle sourit — yeux ailleurs. Le travail est parfait ; le corps, vide.</span></li>
+            <li><span class="time">0:03</span><span><strong>Ascenseur, miroir.</strong> Rouge à lèvres impeccable. Plan serré main qui se crispe sur la pochette. Rythme saccadé.</span></li>
+            <li><span class="time">0:06</span><span><strong>Nuit, appartement.</strong> Message « vu » sans réponse. Elle relit une ancienne conversation. Lui n'aime plus — ou n'aime qu'à distance. Coupe sur le téléphone qui s'éteint.</span></li>
+            <li><span class="time">0:09</span><span><strong>Timelapse enfants.</strong> Même couloir, mêmes murs : poussette → cartable → porte qui claque → valises. Les adultes partent. Elle reste seule dans le cadre, immobile.</span></li>
+            <li><span class="time">0:14</span><span><strong>Dîner pour une.</strong> Verre de vin. Télévision muette. Temps mort. Accumulation de plans courts — le vide comme rythme.</span></li>
+            <li><span class="time">0:17</span><span><strong>Atelier / parfumerie.</strong> Ralentissement. Un flacon sans logo — <em>Maison L.</em> — posé sur marbre. Elle ne l'achète pas encore : elle le regarde.</span></li>
+          </ul>
+        </article>
+
+        <article class="act">
+          <div class="act-head">
+            <span class="act-num">Acte II</span>
+            <h3 class="act-title">Le parfum comme clé</h3>
+            <span class="act-pace">Un souffle · ~6 s</span>
+          </div>
+          <ul class="beats">
+            <li><span class="time">0:19</span><span><strong>Gros plan poignet.</strong> Une vaporisation. Silence total une demi-seconde — puis le son du monde qui revient, étouffé.</span></li>
+            <li><span class="time">0:21</span><span><strong>Macro molécules / lumière dorée.</strong> La matière devient image. Hommage discret à la scène du maître parfumeur : la narine reconnaît avant que la raison comprenne.</span></li>
+          </ul>
+        </article>
+
+        <article class="act">
+          <div class="act-head">
+            <span class="act-num">Acte III</span>
+            <h3 class="act-title">Le Prince — premier amour</h3>
+            <span class="act-pace">Mémoire · ~12 s</span>
+          </div>
+          <ul class="beats">
+            <li><span class="time">0:22</span><span><strong>Flashback — été, autre lumière.</strong> Elle jeune ; lui, le <em>Prince</em> : pas un roi, l'homme qui l'a vue avant qu'elle s'arme. Main dans la main, rire sans bruit.</span></li>
+            <li><span class="time">0:26</span><span><strong>Danse / bal / rue — selon casting.</strong> Émotion pure, pas mélodrame. 16 mm ou grain chaud. Le passé n'est pas regret : il est <em>preuve</em>.</span></li>
+            <li><span class="time">0:30</span><span><strong>Retour présent.</strong> Même plan qu'au début — elle ferme les yeux. Une larme optionnelle, ou seulement la respiration qui change.</span></li>
+            <li><span class="time">0:33</span><span><strong>Packshot Maison L.</strong> Titre : <em>« Absence »</em>. Baseline : <em>« Ce que le corps n'a pas oublié. »</em> Logo fictif.</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="section-intro" style="margin-top:36px;margin-bottom:0;">
+        <strong>Déclinaisons 360° :</strong> hero 16:9 · stories 9:16 (timelapse seul + reveal parfum) · print key visual main/poignet · CRM — <em>« Vous vous souvenez encore de lui ? »</em>
+        · direction artistique noir / crème / or pâle · musique : silence Acte I → motif unique Acte III.
+      </p>
+    </section>
+
     <section id="profile">
       <p class="section-kicker">Profil</p>
       <h2>Storytelling de marque & campagnes 360°</h2>
@@ -314,7 +445,7 @@
 
     <section class="cta-block" id="contact">
       <h2>Disponible Paris · Neuilly</h2>
-      <p>Case study parfum & déclinaisons 360° — à venir.</p>
+      <p>Film spec & moodboard en production — concept personnel pour candidature Parfums Beauté.</p>
       <a class="btn" href="mailto:cesarcabrera@agenceai.app">cesarcabrera@agenceai.app</a>
     </section>
 
