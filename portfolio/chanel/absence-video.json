@@ -76,7 +76,10 @@
       "length_sec": 6,
       "image": "moodboard/07-vaporisation.jpg",
       "output": "clips/i2v/07.mp4",
-      "prompt": "[Style] Macro perfume spray, golden mist. [Character] Same woman, wrist close-up. [0-6s] Camera: macro push-in. Action: Single vaporisation, golden particles suspend in air. Avoid: identity drift on skin, harsh clipping."
+      "prompt": "[Style] Soft macro perfume spray, gentle golden mist only. [Character] Black blazer wrist. [0-6s] Camera: slow macro drift. Action: One delicate vaporisation, fine mist curls upward — NOT explosive, NOT sand blast. Avoid: aggressive particles, harsh clipping.",
+      "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-f1eb6b9b-f799-9ed9-b976-7a2fdc0de83b.mp4",
+      "generated_i2v_raw": "clips/i2v/raw/07.mp4",
+      "generated_clip": "clips/07.mp4"
     },
     {
       "id": "08",
@@ -85,8 +88,8 @@
       "length_sec": 6,
       "image": "moodboard/08-prince-flashback.jpg",
       "output": "clips/i2v/08.mp4",
-      "prompt": "[Style] 16mm warm grain, summer memory, no dialogue. [Character] Same woman age 25, no glasses, loose hair, dancing with a man (the Prince). [0-6s] Camera: gentle handheld drift. Action: Hand in hand, quiet laugh. Avoid: melodrama, identity drift.",
-      "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-2a1c3d0a-c93f-9c6f-bf50-0a81b66a8dd6.mp4",
+      "prompt": "[Style] 16mm warm grain, summer beach memory, no dialogue. [Character] Same woman age 25 alone — fair freckles, short dark wavy hair, no glasses, light dress. [0-6s] Camera: gentle drift along shoreline. Action: She stands alone facing the ocean, quiet wistful smile, wind in hair. NO man, NO couple. Avoid: melodrama, identity drift.",
+      "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-370e458e-61a2-9978-85c1-bf2b779fd108.mp4",
       "generated_i2v_raw": "clips/i2v/raw/08.mp4",
       "generated_clip": "clips/08.mp4"
     },
@@ -97,8 +100,8 @@
       "length_sec": 6,
       "image": "moodboard/09-retour-absence.jpg",
       "output": "clips/i2v/09.mp4",
-      "prompt": "[Style] Return to present, soft packshot foreground. [Character] Same woman 38, glasses, blazer. [0-6s] Camera: slow push-in. Action: Eyes close, breath changes, blurred flacon foreground, title feel Absence. Avoid: identity drift, face blow-out.",
-      "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-14b9e23e-c7ca-934f-9465-0d7ff8553df2.mp4",
+      "prompt": "[Style] Return to present, ocean horizon, dusk light. [Character] Woman 38 — fair freckles, short dark wavy hair, thick black rectangular glasses, black blazer. [0-6s] Camera: slow push-in from behind/side. Action: She stands alone on wet sand facing the open sea, eyes close, breath changes. NO couple. Avoid: identity drift, face blow-out.",
+      "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-43aadc86-984e-9965-8015-b566813646c5.mp4",
       "generated_i2v_raw": "clips/i2v/raw/09.mp4",
       "generated_clip": "clips/09.mp4"
     }
