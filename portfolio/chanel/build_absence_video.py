@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Animate Absence moodboard frames (Ken Burns) and assemble from absence-shots.json."""
+"""Animate Absence moodboard frames and assemble from absence-shots.json.
+
+Uses crop-based Ken Burns (not zoompan) to avoid blown highlights on skin.
+"""
 
 from __future__ import annotations
 
@@ -15,19 +18,22 @@ OUT_VIDEO = ROOT / "video" / "absence.mp4"
 
 FPS = 24
 W, H = 1280, 720
+# headroom for gentle push-in without upscaling past 2× target
+SRC_W, SRC_H = 1600, 900
 
-# zoom expression per shot id
-ZOOM = {
-    "01": "min(zoom+0.0010,1.15)",  # push-in
-    "02": "min(zoom+0.0012,1.18)",  # tight push
-    "03": "1.04",                   # near-static
-    "04": "min(zoom+0.0006,1.08)",  # slow drift
-    "05": "1.03",
-    "06": "min(zoom+0.0008,1.12)",  # rack focus feel
-    "07": "min(zoom+0.0014,1.20)",  # macro
-    "08": "min(zoom+0.0005,1.10)",  # warm memory
-    "09": "min(zoom+0.0007,1.14)",  # return + packshot
+# pixels to crop per frame (push-in). 0 = static hold.
+DRIFT = {
+    "01": 3,
+    "02": 4,
+    "03": 0,
+    "04": 2,
+    "05": 0,
+    "06": 2,
+    "07": 3,
+    "08": 2,
+    "09": 2,
 }
+
 
 def run(cmd: list[str]) -> None:
     print("+", " ".join(cmd))
@@ -45,14 +51,26 @@ def render_clip(shot: dict, out_path: Path) -> None:
 
     sid = shot["id"]
     n = frames_for_ms(shot["duration_ms"])
-    z = ZOOM.get(sid, "min(zoom+0.0008,1.10)")
+    drift = DRIFT.get(sid, 1)
 
-    vf = (
-        f"scale={W * 4}:{H * 4}:flags=lanczos,"
-        f"zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
-        f"d={n}:s={W}x{H}:fps={FPS},"
-        f"format=yuv420p"
-    )
+    if drift <= 0:
+        vf = (
+            f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos+accurate_rnd+full_chroma_int,"
+            f"crop={W}:{H},"
+            f"fps={FPS},"
+            f"format=yuv420p"
+        )
+    else:
+        # crop window shrinks over time → subtle push-in, no zoompan resample burn
+        vf = (
+            f"scale={SRC_W}:{SRC_H}:force_original_aspect_ratio=increase:flags=lanczos+accurate_rnd+full_chroma_int,"
+            f"crop={SRC_W}:{SRC_H},"
+            f"crop=w='max({W},iw-{drift}*n)':h='max({H},ih-{drift}*n*9/16)':"
+            f"x='(iw-ow)/2':y='(ih-oh)/2',"
+            f"scale={W}:{H}:flags=lanczos+accurate_rnd+full_chroma_int,"
+            f"fps={FPS},"
+            f"format=yuv420p"
+        )
 
     run(
         [
@@ -72,11 +90,21 @@ def render_clip(shot: dict, out_path: Path) -> None:
             "-c:v",
             "libx264",
             "-preset",
-            "medium",
+            "slow",
             "-crf",
-            "20",
+            "17",
+            "-bf",
+            "0",
             "-pix_fmt",
             "yuv420p",
+            "-colorspace",
+            "bt709",
+            "-color_primaries",
+            "bt709",
+            "-color_trc",
+            "bt709",
+            "-color_range",
+            "tv",
             "-movflags",
             "+faststart",
             str(out_path),
@@ -131,6 +159,7 @@ def main() -> int:
     total_ms = sum(s["duration_ms"] for s in shots)
     data["assembled_video"] = "video/absence.mp4"
     data["total_duration_ms"] = total_ms
+    data["render_note"] = "v2 crop-based Ken Burns — no zoompan (skin-safe)"
     SHOTS_JSON.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     size_mb = OUT_VIDEO.stat().st_size / (1024 * 1024)

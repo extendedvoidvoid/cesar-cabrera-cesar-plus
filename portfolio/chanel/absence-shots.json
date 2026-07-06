@@ -153,5 +153,6 @@
     }
   ],
   "assembled_video": "video/absence.mp4",
-  "total_duration_ms": 24000
+  "total_duration_ms": 24000,
+  "render_note": "v2 crop-based Ken Burns — no zoompan (skin-safe)"
 }
