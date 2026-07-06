@@ -1,0 +1,97 @@
+{
+  "id": "absence-maison-l",
+  "surface": "video",
+  "title": "Absence — Maison L. · film parfum",
+  "model": "seedance-2.0",
+  "aspect": "16:9",
+  "character_lock": "Woman age 38, fair freckles, short dark wavy hair, thick black rectangular glasses, black matte blazer. Same face every present-day shot. Flashback: age 25, same face, no glasses.",
+  "style_lock": "Luxury perfume cinematography, restrained Chanel-level elegance, photorealistic, no logos, fictional brand Maison L. only.",
+  "assembly": {
+    "fps": 24,
+    "output": "video/absence.mp4",
+    "concat": "ffmpeg -f concat -safe 0 -i video/concat-i2v.txt -c copy -movflags +faststart video/absence.mp4"
+  },
+  "shots": [
+    {
+      "id": "01",
+      "act": 1,
+      "duration_ms": 2000,
+      "length_sec": 6,
+      "image": "moodboard/01-office-void.jpg",
+      "output": "clips/i2v/01.mp4",
+      "prompt": "[Style] Luxury perfume film, cool office light, photorealistic. [Character] Woman 38, fair freckles, short dark wavy hair, thick black rectangular glasses, black blazer. [0-6s] Camera: slow push-in. Action: She stands at lectern, frozen polite smile while blurred audience applauds off-screen. Mood: perfect work, empty body. Avoid: identity drift, face blow-out, jitter."
+    },
+    {
+      "id": "02",
+      "act": 1,
+      "duration_ms": 1500,
+      "length_sec": 6,
+      "image": "moodboard/02-elevator-mirror.jpg",
+      "output": "clips/i2v/02.mp4",
+      "prompt": "[Style] Steel elevator, mirror reflection, tense masque. [Character] Same woman 38, glasses, black blazer. [0-6s] Camera: tight mirror close-up. Action: She applies dark red lipstick in reflection, left hand clutches black leather clutch, knuckles tense. No phone, no sofa. Avoid: duplicate twin panels, identity drift, overexposed skin."
+    },
+    {
+      "id": "03",
+      "act": 1,
+      "duration_ms": 2000,
+      "length_sec": 6,
+      "image": "moodboard/03-phone-night.jpg",
+      "output": "clips/i2v/03.mp4",
+      "prompt": "[Style] Night apartment, rain on window, warm lamp, blue-green mood. [Character] Same woman 38, glasses, black blazer. [0-6s] Camera: static medium. Action: One phone, one screen — thumb hovers over unsent message, she exhales, does not tap send. Avoid: second phone, double screen, identity drift."
+    },
+    {
+      "id": "04",
+      "act": 1,
+      "duration_ms": 2500,
+      "length_sec": 6,
+      "image": "moodboard/04-timelapse-hallway.jpg",
+      "output": "clips/i2v/04.mp4",
+      "prompt": "[Style] Hallway timelapse overlay, ghost motion. [Character] Same woman 38, center frame, immobile. [0-6s] Camera: locked wide. Action: Transparent figures of children cross frame in timelapse blur while she stays perfectly still. Avoid: identity drift, chaotic morphing."
+    },
+    {
+      "id": "05",
+      "act": 1,
+      "duration_ms": 2000,
+      "length_sec": 6,
+      "image": "moodboard/05-dinner-alone.jpg",
+      "output": "clips/i2v/05.mp4",
+      "prompt": "[Style] Static wide, dinner alone, TV flicker. [Character] Same woman 38, glasses, black blazer. [0-6s] Camera: static wide. Action: Wine glass, muted television light pulses, she sits motionless. Avoid: dialogue, identity drift."
+    },
+    {
+      "id": "06",
+      "act": 1,
+      "duration_ms": 2000,
+      "length_sec": 6,
+      "image": "moodboard/06-flacon-marbre.jpg",
+      "output": "clips/i2v/06.mp4",
+      "prompt": "[Style] Marble counter, pace slows, fictional flacon Maison L. [Character] Same woman 38. [0-6s] Camera: rack focus from unbranded glass flacon to her hand approaching. Avoid: Chanel logo, identity drift."
+    },
+    {
+      "id": "07",
+      "act": 2,
+      "duration_ms": 3000,
+      "length_sec": 6,
+      "image": "moodboard/07-vaporisation.jpg",
+      "output": "clips/i2v/07.mp4",
+      "prompt": "[Style] Macro perfume spray, golden mist. [Character] Same woman, wrist close-up. [0-6s] Camera: macro push-in. Action: Single vaporisation, golden particles suspend in air. Avoid: identity drift on skin, harsh clipping."
+    },
+    {
+      "id": "08",
+      "act": 3,
+      "duration_ms": 4000,
+      "length_sec": 6,
+      "image": "moodboard/08-prince-flashback.jpg",
+      "output": "clips/i2v/08.mp4",
+      "prompt": "[Style] 16mm warm grain, summer memory, no dialogue. [Character] Same woman age 25, no glasses, loose hair, dancing with a man (the Prince). [0-6s] Camera: gentle handheld drift. Action: Hand in hand, quiet laugh. Avoid: melodrama, identity drift."
+    },
+    {
+      "id": "09",
+      "act": 3,
+      "duration_ms": 5000,
+      "length_sec": 6,
+      "image": "moodboard/09-retour-absence.jpg",
+      "output": "clips/i2v/09.mp4",
+      "prompt": "[Style] Return to present, soft packshot foreground. [Character] Same woman 38, glasses, blazer. [0-6s] Camera: slow push-in. Action: Eyes close, breath changes, blurred flacon foreground, title feel Absence. Avoid: identity drift, face blow-out."
+    }
+  ]
+}

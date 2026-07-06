@@ -25,12 +25,13 @@
     "fps": 24
   },
   "pipeline_recommended": [
-    "1. Lock character in JSON (this file)",
-    "2. Regen weak frames with image_edit + portrait.jpg (Open Design)",
-    "3. image_to_video per shot (6s) OR Hyperframes HTML → MP4",
-    "4. FFmpeg concat with -c copy",
+    "1. Lock character in absence-shots.json + absence-video.json",
+    "2. i2v per shot: python3 generate_absence_i2v.py --all --assemble (Open Design /videos)",
+    "3. Fallback animatic: python3 build_absence_video.py (FFmpeg Ken Burns)",
+    "4. FFmpeg trim + concat -c copy",
     "5. Music: silence Act I → single motif Act III"
   ],
+  "video_json": "absence-video.json",
   "hyperframes_required": false,
   "hyperframes_note": "No install needed for Absence. Hyperframes only if you want HTML/GSAP typography cards; Remotion (possession-essay) or FFmpeg cover packshot/titles.",
   "video_pipeline": {
