@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>César Cabrera — Concepteur-Rédacteur · Films & Images</title>
+  <meta name="description" content="Portfolio créatif — Déjà Vu (Canal+), narration visuelle, campagnes 360°. Concepteur-rédacteur & producteur." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas: #f5f4ed;
+      --surface: #efeee5;
+      --ink: #1f1d18;
+      --muted: #6b665b;
+      --hairline: #d4d1c5;
+      --accent: #1B365D;
+      --display: 'Instrument Serif', Georgia, serif;
+      --sans: 'Inter Tight', system-ui, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+    body {
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+    .nav {
+      position: sticky; top: 12px; z-index: 50;
+      margin: 12px auto 0; max-width: 920px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 16px 10px 20px;
+      background: rgba(245,244,237,0.85);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--hairline);
+      border-radius: 999px;
+    }
+    .nav a { color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 500; }
+    .nav a:hover { color: var(--muted); }
+    .nav .brand { font-family: var(--display); font-size: 20px; }
+    .nav .links { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+    .nav .pill {
+      font: 500 12px/1 var(--sans);
+      padding: 8px 14px; border-radius: 999px;
+      background: var(--ink); color: var(--canvas);
+      text-decoration: none;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 40px;
+      align-items: start;
+      padding: 72px 0 48px;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .eyebrow {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.08;
+      font-weight: 400;
+      margin: 12px 0 0;
+      max-width: 14ch;
+    }
+    .hero h1 em { font-style: italic; color: var(--muted); }
+    .hero .lede {
+      font-size: 17px; color: var(--muted);
+      max-width: 48ch; margin: 20px 0 28px;
+    }
+    .hero .meta { font-size: 13px; color: var(--muted); }
+    .hero .meta a { color: var(--accent); }
+    .portrait {
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--hairline);
+      margin-top: 28px;
+    }
+
+    section { padding: 56px 0; border-bottom: 1px solid var(--hairline); }
+    section:last-of-type { border-bottom: none; }
+    .section-kicker {
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-family: var(--display);
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 400;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .section-intro { color: var(--muted); max-width: 60ch; margin-bottom: 36px; }
+
+    .work-grid { display: grid; gap: 48px; }
+    .work-item { display: grid; grid-template-columns: 1fr 1.2fr; gap: 32px; align-items: start; }
+    .work-item:nth-child(even) { direction: rtl; }
+    .work-item:nth-child(even) > * { direction: ltr; }
+    .work-copy h3 {
+      font-family: var(--display);
+      font-size: 28px; font-weight: 400; margin: 0 0 8px;
+    }
+    .work-copy .tag {
+      display: inline-block;
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid var(--hairline);
+      background: var(--surface);
+      margin-bottom: 16px;
+    }
+    .work-copy p { color: var(--muted); margin: 0 0 12px; font-size: 15px; }
+    .work-copy .credits {
+      font-size: 12px; color: var(--muted);
+      padding-top: 12px; border-top: 1px solid var(--hairline);
+      margin-top: 16px;
+    }
+    .work-copy .credits strong { color: var(--ink); font-weight: 500; }
+    .embed {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: #111;
+      border: 1px solid var(--hairline);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .stat {
+      padding: 20px;
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+    }
+    .stat .num {
+      font-family: var(--display);
+      font-size: 32px;
+      color: var(--accent);
+    }
+    .stat .lbl { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .skills span {
+      font-size: 12px; padding: 6px 12px;
+      border: 1px solid var(--hairline);
+      background: var(--surface);
+    }
+
+    .cta-block {
+      text-align: center;
+      padding: 64px 0 80px;
+    }
+    .cta-block p { color: var(--muted); max-width: 40ch; margin: 0 auto 24px; }
+    .btn {
+      display: inline-block;
+      font: 500 14px/1 var(--sans);
+      padding: 14px 24px;
+      background: var(--ink); color: var(--canvas);
+      border: 1px solid var(--ink);
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .btn:hover { background: #2a2824; }
+
+    footer {
+      padding: 24px 0 40px;
+      font-size: 12px; color: var(--muted);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    footer a { color: var(--muted); }
+
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; }
+      .portrait { width: 120px; height: 120px; margin-top: 0; }
+      .work-item, .work-item:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+      .stats { grid-template-columns: 1fr; }
+      .nav .links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <a href="../../index.html" class="brand">César Cabrera</a>
+      <ul class="links">
+        <li><a href="#work">Œuvres</a></li>
+        <li><a href="#profile">Profil</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="pill" href="mailto:cesarcabrera@agenceai.app">Contact</a>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Concepteur-Rédacteur Senior · Films & Images</p>
+        <h1>Narration visuelle & <em>formats 360°</em></h1>
+        <p class="lede">
+          Plus de vingt ans à concevoir des récits image pour médias premium et marques internationales.
+          Concepteur-rédacteur & producteur — Canal+ (Déjà Vu, Séries Entre Potes, La Scène).
+        </p>
+        <p class="meta">
+          Rouen · Mobile Paris / Neuilly-sur-Seine<br>
+          <a href="mailto:cesarcabrera@agenceai.app">cesarcabrera@agenceai.app</a> ·
+          <a href="https://linkedin.com/in/hellocesar" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+      <img class="portrait" src="assets/portrait.jpg" alt="César Cabrera — portrait professionnel" width="180" height="180" />
+    </section>
+
+    <section id="work">
+      <p class="section-kicker">Sélection — Déjà Vu</p>
+      <h2>Deux épisodes, deux échelles</h2>
+      <p class="section-intro">
+        Extraits du format <strong>Déjà Vu</strong> (Canal+, Candice Drouet) — parallèles entre cinéma contemporain
+        et références du canon. Musique originale intégrale : César Cabrera (Extended Void).
+      </p>
+
+      <div class="work-grid">
+        <article class="work-item">
+          <div class="work-copy">
+            <span class="tag">Édition ciné · 2022</span>
+            <h3>Déjà Vu — Eiffel</h3>
+            <p>
+              Montage d'influences autour du film <em>Eiffel</em> — architecture narrative,
+              références visuelles et dialogues avec le patrimoine cinématographique français.
+              Format court, rythme éditorial Canal+ Cinéma.
+            </p>
+            <p>
+              Exemple de conception-rédaction sur une sortie grand public,
+              avec recherche iconographique et structure en parallèles visuels.
+            </p>
+            <div class="credits">
+              <strong>Rôle</strong> — Concepteur-rédacteur, producteur, compositeur<br>
+              <strong>Présentation</strong> — Candice Drouet<br>
+              <strong>Musique</strong> — César Cabrera / Extended Void<br>
+              <strong>Diffusion</strong> — Canal+ · avril 2022
+            </div>
+          </div>
+          <div class="embed">
+            <iframe
+              src="https://www.youtube.com/embed/MMRjyePjAC8"
+              title="Déjà Vu — Eiffel — Canal+"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-copy">
+            <span class="tag">Édition festivalière · Berlinale & Mostra</span>
+            <h3>Déjà Vu — David Fincher</h3>
+            <p>
+              Épisode spécial couverture festivalière — influences et références
+              autour de l'univers de David Fincher, dans la continuité des éditions
+              Cannes 2021, Berlinale 2022 et Mostra de Venise 2023.
+            </p>
+            <p>
+              Démontre la capacité à adapter le format Déjà Vu au calendrier international
+              et à construire un récit autour d'un auteur, pas seulement d'une sortie salles.
+            </p>
+            <div class="credits">
+              <strong>Rôle</strong> — Concepteur-rédacteur, producteur, compositeur<br>
+              <strong>Présentation</strong> — Candice Drouet<br>
+              <strong>Musique</strong> — César Cabrera / Extended Void<br>
+              <strong>Contexte</strong> — Couverture festivals · 2023
+            </div>
+          </div>
+          <div class="embed">
+            <iframe
+              src="https://player.vimeo.com/video/860981053?title=0&byline=0&portrait=0"
+              title="Déjà Vu — David Fincher"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </article>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="num">100+</div>
+          <div class="lbl">épisodes Déjà Vu</div>
+        </div>
+        <div class="stat">
+          <div class="num">18</div>
+          <div class="lbl">éditions festivalières (Cannes · Mostra)</div>
+        </div>
+        <div class="stat">
+          <div class="num">6</div>
+          <div class="lbl">saisons · contrat exclusivité Canal+</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile">
+      <p class="section-kicker">Profil</p>
+      <h2>Storytelling de marque & campagnes 360°</h2>
+      <p class="section-intro">
+        Concepteur-rédacteur et producteur — scripts, scénarios, tone of voice,
+        direction artistique et production exécutive pour films publicitaires,
+        digital, social media et live premium.
+      </p>
+      <div class="skills">
+        <span>Concepteur-rédacteur</span>
+        <span>Scripts & scénarios</span>
+        <span>Campagne 360°</span>
+        <span>Films & images</span>
+        <span>Tone of voice</span>
+        <span>Direction artistique</span>
+        <span>Narration visuelle</span>
+        <span>Production exécutive</span>
+        <span>Veille tendances</span>
+      </div>
+    </section>
+
+    <section class="cta-block" id="contact">
+      <p class="section-kicker" style="text-align:center">Portfolio</p>
+      <h2 style="text-align:center">Disponible Paris · Neuilly</h2>
+      <p>Concept personnel — case study parfum & déclinaisons 360° à venir sur cette section.</p>
+      <a class="btn" href="mailto:cesarcabrera@agenceai.app?subject=Portfolio%20C%C3%A9sar%20Cabrera">cesarcabrera@agenceai.app</a>
+    </section>
+
+    <footer>
+      <span>© 2026 César Cabrera — concept personnel</span>
+      <span>
+        <a href="../../index.html">Atelier Synesthésie</a> ·
+        <a href="https://www.canalplus.com/divertissement/deja-vu" target="_blank" rel="noopener">Déjà Vu Canal+</a> ·
+        <a href="https://github.com/extendedvoidvoid/atelier-synesthesie/tree/main/portfolio/chanel" target="_blank" rel="noopener">Source</a>
+      </span>
+    </footer>
+  </div>
+</body>
+</html>
