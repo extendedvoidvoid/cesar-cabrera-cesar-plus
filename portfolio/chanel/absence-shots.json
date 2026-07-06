@@ -1,0 +1,123 @@
+{
+  "project": "Absence — Maison L.",
+  "version": "0.2",
+  "character": {
+    "id": "heroine_present",
+    "age": 38,
+    "skin": "fair, light freckles",
+    "hair": "short dark wavy",
+    "glasses": "thick black rectangular",
+    "wardrobe": "black matte blazer",
+    "notes": "Same face across present-day shots. Flashback: age 25, no glasses, loose hair."
+  },
+  "style": {
+    "palette_act1": ["#1a1a1a", "#6b665b", "#d4d1c5"],
+    "palette_act3": ["#f5f4ed", "#c9a227", "#1B365D"],
+    "aspect_ratio": "16:9",
+    "fps": 24
+  },
+  "pipeline_recommended": [
+    "1. Lock character in JSON (this file)",
+    "2. Regen weak frames with image_edit + portrait.jpg (Open Design)",
+    "3. image_to_video per shot (6s) OR Hyperframes HTML → MP4",
+    "4. FFmpeg concat with -c copy",
+    "5. Music: silence Act I → single motif Act III"
+  ],
+  "hyperframes_required": false,
+  "hyperframes_note": "No install needed for Absence. Hyperframes only if you want HTML/GSAP typography cards; Remotion (possession-essay) or FFmpeg cover packshot/titles.",
+  "video_pipeline": {
+    "source_of_truth": "this JSON — character bible + per-shot timing/prompts/assets",
+    "continuity_lock": ["character", "style.palette_act1", "style.palette_act3", "style.aspect_ratio", "style.fps"],
+    "per_shot_fields": ["moodboard", "prompt_video", "duration_ms", "transition", "seed", "reference_image", "generated_clip", "audio"],
+    "act1": "image_to_video 6s per frame → trim to duration_ms → hard cuts",
+    "act2_3": "slower image_to_video or single 10s clip; dissolve transitions in FFmpeg or Remotion",
+    "assembly": "ffmpeg -f concat -safe 0 -i clips.txt -c copy absence_35s.mp4",
+    "typography": "Remotion or Hyperframes for final packshot only — not full film"
+  },
+  "shots": [
+    {
+      "id": "01",
+      "act": 1,
+      "time_in": "0:00",
+      "duration_ms": 2000,
+      "transition": "cut",
+      "moodboard": "moodboard/01-office-void.jpg",
+      "prompt_video": "Slow push-in, applause blur background, heroine frozen smile",
+      "audio": "muted room tone, distant clap"
+    },
+    {
+      "id": "02",
+      "act": 1,
+      "time_in": "0:02",
+      "duration_ms": 1500,
+      "transition": "cut",
+      "moodboard": "moodboard/02-elevator-mirror.jpg",
+      "prompt_video": "Mirror reflection only, lipstick, clutch grip tightens, no phone",
+      "fix_notes": "REDONE v7 — ascenseur debout, miroir, clutch, zero téléphone"
+    },
+    {
+      "id": "03",
+      "act": 1,
+      "time_in": "0:04",
+      "duration_ms": 2000,
+      "transition": "cut",
+      "moodboard": "moodboard/03-phone-night.jpg",
+      "prompt_video": "One phone one screen, thumb hovers, she exhales, does not send",
+      "fix_notes": "REDONE v3 — one phone, one screen, thumb hovers unsent"
+    },
+    {
+      "id": "04",
+      "act": 1,
+      "time_in": "0:06",
+      "duration_ms": 2500,
+      "transition": "cut",
+      "moodboard": "moodboard/04-timelapse-hallway.jpg",
+      "prompt_video": "Timelapse overlay: ghost children cross frame, she stays center still"
+    },
+    {
+      "id": "05",
+      "act": 1,
+      "time_in": "0:09",
+      "duration_ms": 2000,
+      "transition": "cut",
+      "moodboard": "moodboard/05-dinner-alone.jpg",
+      "prompt_video": "Static wide, wine glass, TV flicker, no dialogue"
+    },
+    {
+      "id": "06",
+      "act": 1,
+      "time_in": "0:12",
+      "duration_ms": 2000,
+      "transition": "dissolve",
+      "moodboard": "moodboard/06-flacon-marbre.jpg",
+      "prompt_video": "Rack focus flacon → her hand approaching, pace slows"
+    },
+    {
+      "id": "07",
+      "act": 2,
+      "time_in": "0:19",
+      "duration_ms": 3000,
+      "transition": "fade",
+      "moodboard": "moodboard/07-vaporisation.jpg",
+      "prompt_video": "Macro spray, golden mist, world sound drops out 0.5s"
+    },
+    {
+      "id": "08",
+      "act": 3,
+      "time_in": "0:22",
+      "duration_ms": 4000,
+      "transition": "dissolve",
+      "moodboard": "moodboard/08-prince-flashback.jpg",
+      "prompt_video": "16mm grain, summer dance with Prince, warm, no dialogue"
+    },
+    {
+      "id": "09",
+      "act": 3,
+      "time_in": "0:30",
+      "duration_ms": 5000,
+      "transition": "fade",
+      "moodboard": "moodboard/09-retour-absence.jpg",
+      "prompt_video": "Return present, eyes closed, breath changes, soft packshot foreground"
+    }
+  ]
+}
