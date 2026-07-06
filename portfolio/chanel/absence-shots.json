@@ -11,8 +11,16 @@
     "notes": "Same face across present-day shots. Flashback: age 25, no glasses, loose hair."
   },
   "style": {
-    "palette_act1": ["#1a1a1a", "#6b665b", "#d4d1c5"],
-    "palette_act3": ["#f5f4ed", "#c9a227", "#1B365D"],
+    "palette_act1": [
+      "#1a1a1a",
+      "#6b665b",
+      "#d4d1c5"
+    ],
+    "palette_act3": [
+      "#f5f4ed",
+      "#c9a227",
+      "#1B365D"
+    ],
     "aspect_ratio": "16:9",
     "fps": 24
   },
@@ -27,8 +35,23 @@
   "hyperframes_note": "No install needed for Absence. Hyperframes only if you want HTML/GSAP typography cards; Remotion (possession-essay) or FFmpeg cover packshot/titles.",
   "video_pipeline": {
     "source_of_truth": "this JSON — character bible + per-shot timing/prompts/assets",
-    "continuity_lock": ["character", "style.palette_act1", "style.palette_act3", "style.aspect_ratio", "style.fps"],
-    "per_shot_fields": ["moodboard", "prompt_video", "duration_ms", "transition", "seed", "reference_image", "generated_clip", "audio"],
+    "continuity_lock": [
+      "character",
+      "style.palette_act1",
+      "style.palette_act3",
+      "style.aspect_ratio",
+      "style.fps"
+    ],
+    "per_shot_fields": [
+      "moodboard",
+      "prompt_video",
+      "duration_ms",
+      "transition",
+      "seed",
+      "reference_image",
+      "generated_clip",
+      "audio"
+    ],
     "act1": "image_to_video 6s per frame → trim to duration_ms → hard cuts",
     "act2_3": "slower image_to_video or single 10s clip; dissolve transitions in FFmpeg or Remotion",
     "assembly": "ffmpeg -f concat -safe 0 -i clips.txt -c copy absence_35s.mp4",
@@ -43,7 +66,8 @@
       "transition": "cut",
       "moodboard": "moodboard/01-office-void.jpg",
       "prompt_video": "Slow push-in, applause blur background, heroine frozen smile",
-      "audio": "muted room tone, distant clap"
+      "audio": "muted room tone, distant clap",
+      "generated_clip": "clips/01.mp4"
     },
     {
       "id": "02",
@@ -53,7 +77,8 @@
       "transition": "cut",
       "moodboard": "moodboard/02-elevator-mirror.jpg",
       "prompt_video": "Mirror reflection only, lipstick, clutch grip tightens, no phone",
-      "fix_notes": "REDONE v7 — ascenseur debout, miroir, clutch, zero téléphone"
+      "fix_notes": "REDONE v7 — ascenseur debout, miroir, clutch, zero téléphone",
+      "generated_clip": "clips/02.mp4"
     },
     {
       "id": "03",
@@ -63,7 +88,8 @@
       "transition": "cut",
       "moodboard": "moodboard/03-phone-night.jpg",
       "prompt_video": "One phone one screen, thumb hovers, she exhales, does not send",
-      "fix_notes": "REDONE v3 — one phone, one screen, thumb hovers unsent"
+      "fix_notes": "REDONE v3 — one phone, one screen, thumb hovers unsent",
+      "generated_clip": "clips/03.mp4"
     },
     {
       "id": "04",
@@ -72,7 +98,8 @@
       "duration_ms": 2500,
       "transition": "cut",
       "moodboard": "moodboard/04-timelapse-hallway.jpg",
-      "prompt_video": "Timelapse overlay: ghost children cross frame, she stays center still"
+      "prompt_video": "Timelapse overlay: ghost children cross frame, she stays center still",
+      "generated_clip": "clips/04.mp4"
     },
     {
       "id": "05",
@@ -81,7 +108,8 @@
       "duration_ms": 2000,
       "transition": "cut",
       "moodboard": "moodboard/05-dinner-alone.jpg",
-      "prompt_video": "Static wide, wine glass, TV flicker, no dialogue"
+      "prompt_video": "Static wide, wine glass, TV flicker, no dialogue",
+      "generated_clip": "clips/05.mp4"
     },
     {
       "id": "06",
@@ -90,7 +118,8 @@
       "duration_ms": 2000,
       "transition": "dissolve",
       "moodboard": "moodboard/06-flacon-marbre.jpg",
-      "prompt_video": "Rack focus flacon → her hand approaching, pace slows"
+      "prompt_video": "Rack focus flacon → her hand approaching, pace slows",
+      "generated_clip": "clips/06.mp4"
     },
     {
       "id": "07",
@@ -99,7 +128,8 @@
       "duration_ms": 3000,
       "transition": "fade",
       "moodboard": "moodboard/07-vaporisation.jpg",
-      "prompt_video": "Macro spray, golden mist, world sound drops out 0.5s"
+      "prompt_video": "Macro spray, golden mist, world sound drops out 0.5s",
+      "generated_clip": "clips/07.mp4"
     },
     {
       "id": "08",
@@ -108,7 +138,8 @@
       "duration_ms": 4000,
       "transition": "dissolve",
       "moodboard": "moodboard/08-prince-flashback.jpg",
-      "prompt_video": "16mm grain, summer dance with Prince, warm, no dialogue"
+      "prompt_video": "16mm grain, summer dance with Prince, warm, no dialogue",
+      "generated_clip": "clips/08.mp4"
     },
     {
       "id": "09",
@@ -117,7 +148,10 @@
       "duration_ms": 5000,
       "transition": "fade",
       "moodboard": "moodboard/09-retour-absence.jpg",
-      "prompt_video": "Return present, eyes closed, breath changes, soft packshot foreground"
+      "prompt_video": "Return present, eyes closed, breath changes, soft packshot foreground",
+      "generated_clip": "clips/09.mp4"
     }
-  ]
+  ],
+  "assembled_video": "video/absence.mp4",
+  "total_duration_ms": 24000
 }

@@ -130,9 +130,12 @@
       overflow: hidden;
       margin: 20px 0 12px;
     }
-    .embed iframe {
+    .embed iframe,
+    .embed video {
       position: absolute; inset: 0;
       width: 100%; height: 100%; border: 0;
+      object-fit: cover;
+      background: #000;
     }
     .video-links {
       display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;
@@ -416,11 +419,20 @@
         Une femme qui a tout réussi sauf sentir.
       </p>
       <div class="case-meta">
-        <span>30–45 s</span>
+        <span>24 s · animatic</span>
         <span>Parfums & Beauté</span>
         <span>Film · Social · Print</span>
         <span>Concept César Cabrera</span>
       </div>
+
+      <div class="embed" style="margin-top:28px;">
+        <video controls playsinline preload="metadata" poster="moodboard/01-office-void.jpg">
+          <source src="video/absence.mp4?v=1" type="video/mp4" />
+        </video>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin:12px 0 0;">
+        Animatic — 9 plans moodboard, montage Ken Burns (FFmpeg) · spec 30–45 s en production finale.
+      </p>
 
       <div class="insight-box">
         <em>Insight :</em> le parfum ne comble pas le vide — il prouve que l'émotion n'a jamais disparu,
@@ -515,7 +527,7 @@
 
     <section class="cta-block" id="contact">
       <h2>Disponible Paris · Neuilly</h2>
-      <p>Film spec & moodboard en production — concept personnel pour candidature Parfums Beauté.</p>
+      <p>Case study « Absence » — animatic & moodboard en ligne · concept personnel Parfums Beauté.</p>
       <a class="btn" href="mailto:cesarcabrera@agenceai.app">cesarcabrera@agenceai.app</a>
     </section>
 
