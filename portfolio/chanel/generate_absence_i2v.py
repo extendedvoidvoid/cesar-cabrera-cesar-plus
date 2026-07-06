@@ -1,83 +1,116 @@
 #!/usr/bin/env python3
-"""Generate Absence clips via Open Design i2v (JSON-driven).
-
-Requires:
-  - Open Design daemon running (Node ~24): cd open-design && pnpm tools-dev
-  - Video provider configured in OD Settings (seedance-2.0 or grok-imagine-video)
-  - OD project opened on portfolio/chanel (or pass --project-id)
-
-Usage:
-  python3 generate_absence_i2v.py --shot 01        # one shot
-  python3 generate_absence_i2v.py --all              # all 9
-  python3 generate_absence_i2v.py --all --assemble   # then trim + concat
-"""
+"""Generate Absence clips via xAI grok-imagine-video i2v (JSON-driven)."""
 
 from __future__ import annotations
 
 import argparse
+import base64
 import json
-import os
+import mimetypes
 import subprocess
 import sys
+import time
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 VIDEO_JSON = ROOT / "absence-video.json"
-OD_BIN = Path(os.environ.get("OD_BIN", "/Users/alexphoenix/open-design/apps/daemon/dist/cli.js"))
-OD_NODE = os.environ.get("OD_NODE_BIN", "node")
+AUTH_PATH = Path.home() / ".grok" / "auth.json"
+API = "https://api.x.ai/v1"
 
 
-def run(cmd: list[str], *, cwd: Path | None = None) -> str:
-    print("+", " ".join(cmd))
-    return subprocess.check_output(cmd, cwd=cwd, text=True).strip()
+def load_api_key() -> str:
+    if not AUTH_PATH.exists():
+        raise SystemExit(f"Missing {AUTH_PATH}")
+    data = json.loads(AUTH_PATH.read_text(encoding="utf-8"))
+    entry = next(iter(data.values()))
+    key = entry.get("key")
+    if not key:
+        raise SystemExit("No xAI key in Grok auth.json")
+    return key
 
 
-def daemon_url() -> str:
-    return os.environ.get("OD_DAEMON_URL", "http://127.0.0.1:7456")
+def image_data_url(path: Path) -> str:
+    mime = mimetypes.guess_type(path.name)[0] or "image/jpeg"
+    b64 = base64.b64encode(path.read_bytes()).decode("ascii")
+    return f"data:{mime};base64,{b64}"
 
 
-def od_generate(shot: dict, model: str, project_id: str) -> Path:
-    out_name = shot["output"]
-    prompt = shot["prompt"]
-    img = shot["image"]
-    length = shot.get("length_sec", 6)
-    aspect = shot.get("aspect", "16:9")
+def api_json(method: str, url: str, key: str, body: dict | None = None, retries: int = 5) -> dict:
+    data = None if body is None else json.dumps(body).encode("utf-8")
+    last_err: Exception | None = None
+    for attempt in range(retries):
+        req = urllib.request.Request(
+            url,
+            data=data,
+            headers={
+                "Authorization": f"Bearer {key}",
+                "Content-Type": "application/json",
+            },
+            method=method,
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=180) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            msg = e.read().decode("utf-8", errors="replace")[:800]
+            raise RuntimeError(f"HTTP {e.code}: {msg}") from e
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            last_err = e
+            time.sleep(min(2 ** attempt, 30))
+    raise RuntimeError(f"API failed after {retries} tries: {last_err}") from last_err
 
-    raw = run(
-        [
-            OD_NODE,
-            str(OD_BIN),
-            "media",
-            "generate",
-            "--surface",
-            "video",
-            "--model",
-            model,
-            "--project",
-            project_id,
-            "--prompt",
-            prompt,
-            "--image",
-            img,
-            "--length",
-            str(length),
-            "--aspect",
-            aspect,
-            "--output",
-            out_name,
-            "--daemon-url",
-            daemon_url(),
-        ],
-        cwd=ROOT,
-    )
-    data = json.loads(raw)
-    rel = data.get("file", {}).get("name") or out_name
-    return ROOT / rel
+
+def generate_i2v(shot: dict, key: str, model: str) -> str:
+    img = ROOT / shot["image"]
+    if not img.exists():
+        raise FileNotFoundError(img)
+
+    payload = {
+        "model": model,
+        "prompt": shot["prompt"],
+        "duration": shot.get("length_sec", 6),
+        "aspect_ratio": shot.get("aspect", "16:9"),
+        "resolution": "720p",
+        "image": {"url": image_data_url(img)},
+    }
+    print(f"[{shot['id']}] submit i2v…")
+    submit = api_json("POST", f"{API}/videos/generations", key, payload)
+    request_id = submit.get("request_id") or submit.get("id")
+    video_url = (submit.get("video") or {}).get("url")
+    if video_url:
+        return video_url
+    if not request_id:
+        raise RuntimeError(f"No request_id: {submit}")
+
+    started = time.time()
+    while time.time() - started < 600:
+        time.sleep(5)
+        poll = api_json("GET", f"{API}/videos/{request_id}", key)
+        status = poll.get("status", "pending")
+        progress = poll.get("progress")
+        print(f"[{shot['id']}] {status} {progress or ''}")
+        if status in ("done", "succeeded"):
+            url = (poll.get("video") or {}).get("url")
+            if not url:
+                raise RuntimeError(f"done but no url: {poll}")
+            return url
+        if status in ("failed", "expired"):
+            raise RuntimeError(f"generation {status}: {poll.get('error', poll)}")
+
+    raise TimeoutError(f"shot {shot['id']} timed out")
+
+
+def download(url: str, dest: Path) -> None:
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    req = urllib.request.Request(url)
+    with urllib.request.urlopen(req, timeout=300) as resp, dest.open("wb") as f:
+        f.write(resp.read())
 
 
 def trim_clip(src: Path, ms: int, dest: Path) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
-    sec = ms / 1000
     subprocess.run(
         [
             "ffmpeg",
@@ -88,7 +121,7 @@ def trim_clip(src: Path, ms: int, dest: Path) -> None:
             "-i",
             str(src),
             "-t",
-            f"{sec:.3f}",
+            f"{ms / 1000:.3f}",
             "-c",
             "copy",
             "-movflags",
@@ -99,10 +132,10 @@ def trim_clip(src: Path, ms: int, dest: Path) -> None:
     )
 
 
-def assemble(trimmed: list[Path], out: Path) -> None:
+def assemble(clips: list[Path], out: Path) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
-    list_file = out.parent / "concat-i2v.txt"
-    list_file.write_text("".join(f"file '{p.resolve()}'\n" for p in trimmed), encoding="utf-8")
+    lst = out.parent / "concat-i2v.txt"
+    lst.write_text("".join(f"file '{p.resolve()}'\n" for p in clips), encoding="utf-8")
     subprocess.run(
         [
             "ffmpeg",
@@ -115,7 +148,7 @@ def assemble(trimmed: list[Path], out: Path) -> None:
             "-safe",
             "0",
             "-i",
-            str(list_file),
+            str(lst),
             "-c",
             "copy",
             "-movflags",
@@ -128,46 +161,61 @@ def assemble(trimmed: list[Path], out: Path) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--shot", help="Generate one shot id, e.g. 01")
-    ap.add_argument("--all", action="store_true", help="Generate all shots")
-    ap.add_argument("--assemble", action="store_true", help="Trim to duration_ms and concat")
-    ap.add_argument("--project-id", default=os.environ.get("OD_PROJECT_ID", ""))
-    ap.add_argument("--model", default="")
+    ap.add_argument("--shot", help="e.g. 01")
+    ap.add_argument("--all", action="store_true")
+    ap.add_argument("--assemble", action="store_true")
+    ap.add_argument("--skip-existing", action="store_true", help="Skip shots with raw i2v mp4")
+    ap.add_argument("--from-shot", help="Start at shot id, e.g. 07")
+    ap.add_argument("--model", default="grok-imagine-video")
     args = ap.parse_args()
 
     spec = json.loads(VIDEO_JSON.read_text(encoding="utf-8"))
-    model = args.model or spec.get("model", "seedance-2.0")
-
-    if not args.project_id:
-        print("Set --project-id or OD_PROJECT_ID (Open Design project for portfolio/chanel).", file=sys.stderr)
-        return 1
-
     shots = spec["shots"]
     if args.shot:
         shots = [s for s in shots if s["id"] == args.shot]
-        if not shots:
-            print(f"Unknown shot {args.shot}", file=sys.stderr)
-            return 1
+    elif args.from_shot:
+        shots = [s for s in shots if s["id"] >= args.from_shot]
     elif not args.all:
         ap.print_help()
         return 1
 
-    generated: list[tuple[dict, Path]] = []
+    key = load_api_key()
+    raw_dir = ROOT / "clips" / "i2v" / "raw"
+    trimmed: list[Path] = []
+
     for shot in shots:
-        path = od_generate(shot, model, args.project_id)
-        generated.append((shot, path))
-        shot["generated_i2v"] = str(path.relative_to(ROOT))
+        raw = raw_dir / f"{shot['id']}.mp4"
+        if args.skip_existing and raw.exists():
+            print(f"[{shot['id']}] skip existing raw")
+        else:
+            url = generate_i2v(shot, key, args.model)
+            print(f"[{shot['id']}] download → {raw.name}")
+            download(url, raw)
+            shot["video_url"] = url
+        shot["generated_i2v_raw"] = str(raw.relative_to(ROOT))
+
+        if args.assemble:
+            out = ROOT / "clips" / f"{shot['id']}.mp4"
+            trim_clip(raw, shot["duration_ms"], out)
+            trimmed.append(out)
+            shot["generated_clip"] = str(out.relative_to(ROOT))
 
     if args.assemble:
-        trimmed: list[Path] = []
-        for shot, src in generated:
-            dest = ROOT / "clips" / f"{shot['id']}.mp4"
-            trim_clip(src, shot["duration_ms"], dest)
-            trimmed.append(dest)
-        out = ROOT / spec["assembly"]["output"]
-        assemble(trimmed, out)
-        print(f"Assembled {out}")
+        all_trimmed = [
+            ROOT / "clips" / f"{s['id']}.mp4"
+            for s in spec["shots"]
+            if (ROOT / "clips" / f"{s['id']}.mp4").exists()
+        ]
+        if len(all_trimmed) == len(spec["shots"]):
+            out = ROOT / spec["assembly"]["output"]
+            assemble(all_trimmed, out)
+            spec["assembled_video"] = str(out.relative_to(ROOT))
+            spec["render_note"] = "grok-imagine-video i2v from absence-video.json"
+        else:
+            print(f"Assemble pending: {len(all_trimmed)}/{len(spec['shots'])} clips ready")
 
+    VIDEO_JSON.write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print("Done.")
     return 0
 
 
