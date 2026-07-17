@@ -373,6 +373,136 @@
       border-radius: 4px;
       text-decoration: none;
     }
+    .btn.btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      margin-left: 8px;
+    }
+    .btn.btn-ghost:hover { background: var(--ink); color: var(--canvas); }
+
+    /* —— CV (adapted CR Films & Images) —— */
+    .cv {
+      background: var(--canvas);
+      margin: 0 -28px;
+      padding: 56px 28px 48px;
+      border-top: 1px solid var(--hairline);
+    }
+    .cv-head {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding-bottom: 28px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .cv-photo {
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--hairline);
+    }
+    .cv-head h2 {
+      font-size: clamp(26px, 3.5vw, 34px);
+      margin: 0 0 6px;
+    }
+    .cv-role {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 48ch;
+      margin: 0 0 10px;
+    }
+    .cv-contact {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .cv-contact a { color: var(--accent); text-decoration: none; }
+    .cv-download { text-align: right; }
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 40px;
+    }
+    .cv h3 {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--hairline);
+      font-weight: 500;
+    }
+    .cv-block { margin-bottom: 28px; }
+    .cv-profile {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .cv-job { margin-bottom: 18px; }
+    .cv-job-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .cv-job-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--ink);
+    }
+    .cv-job-org {
+      font-size: 13px;
+      color: var(--ink);
+    }
+    .cv-job-dates {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-left: auto;
+    }
+    .cv-job ul {
+      margin: 0;
+      padding-left: 1.1em;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .cv-job li { margin-bottom: 4px; }
+    .cv-job li strong { color: var(--ink); font-weight: 500; }
+    .cv-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .cv-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .cv-list li:last-child { border-bottom: none; }
+    .cv-list strong { color: var(--ink); font-weight: 500; }
+    .cv-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .cv-tags span {
+      font-size: 11px;
+      padding: 5px 10px;
+      border: 1px solid var(--hairline);
+      background: var(--surface);
+      color: var(--ink);
+    }
+    .cv-note {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+      font-style: italic;
+    }
 
     footer {
       padding: 24px 0 40px;
@@ -388,6 +518,10 @@
       .stats { grid-template-columns: 1fr; }
       .moodboard-grid { grid-template-columns: 1fr; }
       .nav .links { display: none; }
+      .cv-head { grid-template-columns: auto 1fr; }
+      .cv-download { grid-column: 1 / -1; text-align: left; }
+      .cv-grid { grid-template-columns: 1fr; gap: 28px; }
+      .cv-job-dates { margin-left: 0; width: 100%; }
     }
   </style>
 </head>
@@ -398,7 +532,7 @@
       <ul class="links">
         <li><a href="#work">Œuvres</a></li>
         <li><a href="#case-study">Case study</a></li>
-        <li><a href="#profile">Profil</a></li>
+        <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a class="pill" href="mailto:extendedvoid.prod@gmail.com">Contact</a>
@@ -848,7 +982,9 @@
       <p class="section-kicker">Profil</p>
       <h2>Storytelling de marque & campagnes 360°</h2>
       <p class="section-intro">
-        Scripts, scénarios, tone of voice, direction artistique, production exécutive — films publicitaires, digital, social.
+        Scripts, scénarios, tone of voice, direction artistique, production exécutive —
+        films publicitaires, digital, social — pour un poste de
+        <strong>Concepteur-Rédacteur Senior Films &amp; Images</strong> (Parfums Beauté).
       </p>
       <div class="skills">
         <span>Concepteur-rédacteur</span>
@@ -857,18 +993,215 @@
         <span>Films & images</span>
         <span>Tone of voice</span>
         <span>Narration visuelle</span>
+        <span>Brief créatif</span>
+        <span>Veille tendances</span>
+      </div>
+    </section>
+
+    <section id="cv" class="cv">
+      <p class="section-kicker">Curriculum vitæ · adapté poste</p>
+      <div class="cv-head">
+        <img class="cv-photo" src="assets/portrait.jpg" alt="César Cabrera" width="88" height="88" />
+        <div>
+          <h2>César Cabrera</h2>
+          <p class="cv-role">
+            Concepteur-Rédacteur Senior — Films &amp; Images ·
+            Storytelling de marque &amp; campagnes 360°
+          </p>
+          <p class="cv-contact">
+            <a href="tel:+33602081648">+33&nbsp;6&nbsp;02&nbsp;08&nbsp;16&nbsp;48</a>
+            ·
+            <a href="mailto:extendedvoid.prod@gmail.com">extendedvoid.prod@gmail.com</a><br>
+            134 rue du Renard, 76000 Rouen · Mobile Paris / Neuilly-sur-Seine
+          </p>
+        </div>
+        <div class="cv-download">
+          <a class="btn" href="assets/CV_Cesar_Cabrera_CR_Films_Images.pdf" download>
+            Télécharger PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="cv-grid">
+        <div>
+          <div class="cv-block">
+            <h3>Profil</h3>
+            <p class="cv-profile">
+              Concepteur-rédacteur et producteur de narration visuelle.
+              Plus de vingt ans à concevoir des formats, des campagnes et des récits image
+              pour médias premium, marques internationales et institutions culturelles.
+              Expertise&nbsp;: storytelling de marque, concepts et scripts déclinables en
+              communication 360° (films publicitaires, digital, social media, print, CRM, live).
+              Maîtrise du tone of voice, de la direction artistique et des étapes de production
+              d’une campagne visuelle — de l’insight au livrable (storyboard, animatic, film).
+            </p>
+          </div>
+
+          <div class="cv-block">
+            <h3>Compétences clés</h3>
+            <ul class="cv-list">
+              <li><strong>Stratégie &amp; contenu</strong> — storytelling de marque, concepts 360°, scripts films &amp; digital, tone of voice, brief créatif, veille tendances</li>
+              <li><strong>Films &amp; images</strong> — films publicitaires, contenus digitaux, couverture festivalière, direction artistique live, production exécutive</li>
+              <li><strong>Collaboration</strong> — direction de création, équipes rédactionnelles, créatifs, designers, production</li>
+              <li><strong>Innovation</strong> — pipelines génératifs (vidéo, texte, son) au service de la narration créative</li>
+            </ul>
+          </div>
+
+          <div class="cv-block">
+            <h3>Mots-clés (ATS)</h3>
+            <div class="cv-tags">
+              <span>Concepteur-rédacteur senior</span>
+              <span>Films et images</span>
+              <span>Campagne 360°</span>
+              <span>Scripts &amp; scénarios</span>
+              <span>Tone of voice</span>
+              <span>Narration visuelle</span>
+              <span>Parfums &amp; Beauté</span>
+              <span>Digital · Social · Print · CRM</span>
+              <span>Direction artistique</span>
+              <span>Brief créatif</span>
+            </div>
+          </div>
+
+          <div class="cv-block">
+            <h3>Formation</h3>
+            <ul class="cv-list">
+              <li><strong>Formation Documentaire</strong> — École des Gobelins, 2024</li>
+              <li><strong>Master 2 Commerce International</strong> — Cnam, 2008</li>
+              <li><strong>Licence LLCE</strong> — Université Paris X Nanterre, 2004</li>
+            </ul>
+          </div>
+
+          <div class="cv-block">
+            <h3>Langues</h3>
+            <ul class="cv-list">
+              <li><strong>Français</strong> — langue maternelle</li>
+              <li><strong>Anglais</strong> — C1 · Avancé</li>
+              <li><strong>Espagnol</strong> — langue maternelle</li>
+              <li><strong>Italien</strong> — A2 · Élémentaire</li>
+            </ul>
+          </div>
+
+          <div class="cv-block">
+            <h3>Portfolio</h3>
+            <ul class="cv-list">
+              <li><strong>« Absence »</strong> — film parfum, concept personnel · spec · <a href="#case-study" style="color:var(--accent)">case study</a></li>
+              <li><strong>Déjà Vu</strong> — <a href="https://www.canalplus.com/divertissement/deja-vu" target="_blank" rel="noopener" style="color:var(--accent)">canalplus.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="cv-block">
+            <h3>Expérience</h3>
+
+            <article class="cv-job">
+              <div class="cv-job-head">
+                <span class="cv-job-title">Concepteur-Rédacteur &amp; Producteur</span>
+                <span class="cv-job-org">Groupe Canal+</span>
+                <span class="cv-job-dates">2017 – 2024</span>
+              </div>
+              <ul>
+                <li>Contrat d’exclusivité — conception, rédaction et production de 3 formats&nbsp;: <strong>Déjà Vu</strong> (6 saisons), <strong>Séries Entre Potes</strong>, <strong>La Scène</strong>.</li>
+                <li><strong>Déjà Vu</strong>&nbsp;: format de référence (parallèles sorties ciné / canon). 100+ épisodes (87 standards + 18 éditions festivalières). Musiques originales (crédit Canal+&nbsp;: César Cabrera / Extended Void). Des millions de vues cumulées.</li>
+                <li>Éditions festivalières&nbsp;: Cannes 2021 (9 ép.), Mostra de Venise 2023 (9 ép.), Deauville 2024 + couverture Berlinale 2022.</li>
+                <li>Scripts, concepts et production exécutive pour contenus TV et digital premium — rythme, narration visuelle, déclinaisons multi-supports.</li>
+              </ul>
+            </article>
+
+            <article class="cv-job">
+              <div class="cv-job-head">
+                <span class="cv-job-title">Réalisateur vidéo hommage</span>
+                <span class="cv-job-org">Cérémonie des César</span>
+                <span class="cv-job-dates">2019</span>
+              </div>
+              <ul>
+                <li>Vidéo hommage à Robert Redford — César d’honneur.</li>
+              </ul>
+            </article>
+
+            <article class="cv-job">
+              <div class="cv-job-head">
+                <span class="cv-job-title">Conception de campagnes de contenu culturel</span>
+                <span class="cv-job-org">Netflix / Konbini / Adidas</span>
+                <span class="cv-job-dates">2015 – 2017</span>
+              </div>
+              <ul>
+                <li>Campagnes de contenu culturel pour marques mondiales.</li>
+                <li>Format de référence Konbini / Netflix — Festival de Cannes 2016.</li>
+              </ul>
+            </article>
+
+            <article class="cv-job">
+              <div class="cv-job-head">
+                <span class="cv-job-title">Producteur &amp; direction artistique live</span>
+                <span class="cv-job-org">Événementiel premium · Paris</span>
+                <span class="cv-job-dates">2012 – 2014</span>
+              </div>
+              <ul>
+                <li>Producteur soirées Grolsch «&nbsp;Swing at the Top&nbsp;» — Palais de Tokyo (Factory Warhol, 2000+ convives).</li>
+                <li>Visuels live Dream Koala — Nuit SFR Live, Grand Palais (6000+ personnes).</li>
+                <li>Direction artistique VJing &amp; vidéo mapping.</li>
+              </ul>
+            </article>
+
+            <article class="cv-job">
+              <div class="cv-job-head">
+                <span class="cv-job-title">Animateur cycle «&nbsp;Vidéo Club&nbsp;»</span>
+                <span class="cv-job-org">Cinéma Omnia République · Rouen</span>
+                <span class="cv-job-dates">2024 – 2026</span>
+              </div>
+              <ul>
+                <li>Vidéo essays originaux et médiation critique pour le public.</li>
+              </ul>
+            </article>
+
+            <article class="cv-job">
+              <div class="cv-job-head">
+                <span class="cv-job-title">Producteur créatif</span>
+                <span class="cv-job-org">The Artist Academy &amp; La Sorbonne</span>
+                <span class="cv-job-dates">2024</span>
+              </div>
+              <ul>
+                <li>Conception narrative et masterclasses — Flaubert, Kafka, Stefan Zweig.</li>
+              </ul>
+            </article>
+
+            <article class="cv-job">
+              <div class="cv-job-head">
+                <span class="cv-job-title">Professeur contractuel</span>
+                <span class="cv-job-org">Ministère de l’Éducation Nationale</span>
+                <span class="cv-job-dates">2004 – 2016</span>
+              </div>
+              <ul>
+                <li>Espagnol (Normandie, Lille) et Musique (Mayotte)&nbsp;: parcours, supports, médiation.</li>
+              </ul>
+            </article>
+
+            <p class="cv-note">
+              CV adapté pour un poste de concepteur-rédacteur senior films &amp; images
+              (Parfums Beauté) — priorisation narration visuelle, 360°, tone of voice ;
+              sans angle software engineer.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="cta-block" id="contact">
       <h2>Disponible Paris · Neuilly</h2>
-      <p>Case study « Absence » — storyboard + animatic stills · concept personnel · spec Parfums Beauté.</p>
+      <p>
+        Case study «&nbsp;Absence&nbsp;» + CV adapté CR Films &amp; Images ·
+        concept personnel · spec Parfums Beauté.
+      </p>
       <a class="btn" href="mailto:extendedvoid.prod@gmail.com">extendedvoid.prod@gmail.com</a>
+      <a class="btn btn-ghost" href="assets/CV_Cesar_Cabrera_CR_Films_Images.pdf" download>CV PDF</a>
     </section>
 
     <footer>
       <span>© 2026 César Cabrera</span>
       <span>
+        <a href="#cv">CV</a> ·
         <a href="https://www.canalplus.com/divertissement/deja-vu" target="_blank" rel="noopener">Déjà Vu</a> ·
         <a href="https://github.com/extendedvoidvoid/atelier-synesthesie/tree/main/portfolio/chanel" target="_blank" rel="noopener">Source</a>
       </span>
