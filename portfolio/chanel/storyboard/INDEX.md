@@ -3,7 +3,7 @@
 **CONCEPT PERSONNEL · SPEC**  
 Storyboard / fiche plans — animatic stills · hard cuts · B&W  
 Closed room · waiting · one discreet blank flacon · empty room · black  
-**No hang-up phone shot** · no brand name · no logo on bottle
+**End card César Cabrera** · no hang-up phone · no brand name · no logo on bottle
 
 **Timing animatic stills:** 70″ (01–10) + 5″ générique Didot = **75″**
 
@@ -19,7 +19,7 @@ Closed room · waiting · one discreet blank flacon · empty room · black
 | `shot-07.jpg` | 07 | 00:40–00:48 | 8″ | Fenêtre · nuit | PA | WAIT |
 | `shot-08.jpg` | 08 | 00:48–00:56 | 8″ | Insert · flacon | Insert | TRACE |
 | `shot-09.jpg` | 09 | 00:56–01:04 | 8″ | Chambre vide | PL | AFTER |
-| `shot-10.jpg` | 10 | 01:04–01:10 | 6″ | Noir · hold | Black | HOLD |
+| `10-noir.jpg` | 10 | 01:04–01:10 | 6″ | César Cabrera (générique) | End card | HOLD |
 
 ## Frame notes (court)
 
@@ -32,6 +32,6 @@ Closed room · waiting · one discreet blank flacon · empty room · black
 7. Baie vitrée nuit, reflets, skyline bokeh.  
 8. Insert cristal anonyme sur bois, lumière seule.  
 9. PL chambre vide, draps froissés, chaise.  
-10. Full black hold — pas de téléphone / pas de super.
+10. End card « César Cabrera » sur fond noir — pas de téléphone / pas de super marque.
 
 Hang-up frames archived in `_archive_hang_up/` — **not** in board or animatic.
