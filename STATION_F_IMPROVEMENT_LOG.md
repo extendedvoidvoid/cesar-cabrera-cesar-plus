@@ -212,7 +212,8 @@ A: "HAL portal for cloud credits is critical — we need €25K-100K to scale. V
 
 **Unique Differentiator Added:** Founder uniquely combines:
 - **Media distribution** expertise (Netflix/Konnibi shaped 18-35 market)
-- **AI innovation** leadership (Artist Academy world-first literary AI)
+- **AI innovation** leadership (Artist Academy world-first literary AI with 60K+ member institution)
+- **Institution credibility** (Artist Academy: 4.8/5 rating, Qualiopi certified, Académie Goncourt instructors)
 - **Creative mastery** (video essays, masterclasses, Canal+)
 - **Technical execution** (CraftCut pipeline)
 

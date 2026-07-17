@@ -121,6 +121,11 @@ CraftCut solves all three: **premium-quality automation**, daily short-form deve
 #### 🤖 **AI Pioneer (2024) — The Technical Visionary**
 
 **Artist Academy Paris — World Premiere AI Project**
+- **Institution:** [The Artist Academy](https://www.the-artist-academy.fr/) — France's premier creative academy
+  - **Scale:** 60,000+ members have realized their writing projects
+  - **Quality:** 4.8/5 satisfaction rating, Qualiopi certified
+  - **Instructors:** Home to masterclasses by Éric-Emmanuel Schmitt (Académie Goncourt jury member, translated in 45 languages), Bernard Werber, Bernard Minier, Douglas Kennedy, Raphaëlle Giordano
+  - **Mission:** "Give you the power to rediscover yourself in a creative expression that is uniquely yours" — perfect alignment with CraftCut's philosophy
 - **Role:** Lead AI architect and creative director
 - **Mission:** Recreate **classic literary voices** (Flaubert, Kafka, Stefan Zweig) using advanced AI
 - **Technologies Deployed:**
@@ -294,7 +299,8 @@ CraftCut embodies Station F's three pillars:
 
 ### What We Bring to Station F
 - **Media Insider Knowledge:** Netflix/Konnibi experience means I can connect Station F startups with Paris' media ecosystem
-- **AI Thought Leadership:** Artist Academy world-first project positions me as a resource for creative AI applications
+- **AI Thought Leadership:** Artist Academy world-first project (with 60K+ member, Qualiopi-certified institution) positions me as a resource for creative AI applications
+- **Premium Institution Network:** Direct collaboration with The Artist Academy (home to Académie Goncourt jury members) opens doors for Station F community
 - **Technical expertise:** Multi-agent AI systems, cloud orchestration, fine-tuning pipelines
 - **Creative standards:** Broadcast-quality knowledge from Canal+ and premium brand work
 - **Educational Value:** Masterclass experience means I can mentor founders on storytelling and AI creativity
