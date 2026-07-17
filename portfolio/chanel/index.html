@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>César Cabrera — Concepteur-Rédacteur · Films & Images</title>
-  <meta name="description" content="Portfolio — Déjà Vu (Canal+), narration visuelle, campagnes 360°." />
+  <meta name="description" content="Portfolio — Déjà Vu (Canal+), case study « Absence » film parfum (spec), narration visuelle." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -277,6 +277,22 @@
       margin-bottom: 4px;
       letter-spacing: 0;
     }
+    .moodboard-card .frame-note {
+      display: block;
+      margin-top: 6px;
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0;
+      color: var(--muted);
+      line-height: 1.4;
+      text-transform: none;
+    }
+    .moodboard-card .prod-line {
+      display: block;
+      margin-top: 6px;
+      font-size: 10px;
+      color: #8a8578;
+    }
     .character-bible {
       font-size: 13px;
       color: var(--muted);
@@ -284,6 +300,66 @@
       padding: 14px 16px;
       border: 1px dashed var(--hairline);
       background: var(--canvas);
+    }
+    .shot-fiche {
+      margin-top: 40px;
+      display: grid;
+      gap: 0;
+    }
+    .shot-fiche article {
+      display: grid;
+      grid-template-columns: minmax(200px, 280px) 1fr;
+      gap: 20px;
+      padding: 20px 0;
+      border-top: 1px solid var(--hairline);
+      align-items: start;
+    }
+    .shot-fiche article:last-child { border-bottom: 1px solid var(--hairline); }
+    .shot-fiche img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      border: 1px solid var(--hairline);
+      filter: grayscale(1) contrast(1.05);
+      background: #111;
+    }
+    .shot-fiche .shot-head {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .shot-fiche h4 {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0 0 12px;
+    }
+    .shot-fiche dl {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 6px 12px;
+      margin: 0;
+      font-size: 13px;
+    }
+    .shot-fiche dt {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-top: 2px;
+    }
+    .shot-fiche dd {
+      margin: 0;
+      color: var(--muted);
+    }
+    .shot-fiche dd strong { color: var(--ink); font-weight: 500; }
+    @media (max-width: 800px) {
+      .shot-fiche article { grid-template-columns: 1fr; }
     }
 
     .cta-block { text-align: center; padding: 64px 0 80px; }
@@ -325,7 +401,7 @@
         <li><a href="#profile">Profil</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a class="pill" href="mailto:cesarcabrera@agenceai.app">Contact</a>
+      <a class="pill" href="mailto:extendedvoid.prod@gmail.com">Contact</a>
     </header>
 
     <section class="hero">
@@ -338,8 +414,7 @@
         </p>
         <p class="meta">
           Rouen · Mobile Paris / Neuilly-sur-Seine<br>
-          <a href="mailto:cesarcabrera@agenceai.app">cesarcabrera@agenceai.app</a> ·
-          <a href="https://linkedin.com/in/hellocesar" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:extendedvoid.prod@gmail.com">extendedvoid.prod@gmail.com</a>
         </p>
       </div>
       <div class="hero-visual">
@@ -415,97 +490,357 @@
       <p class="section-kicker">Concept personnel · Spec</p>
       <h2>« Absence » — film parfum</h2>
       <p class="section-intro">
-        Marque fictive <strong>Maison L.</strong> — hommage au mécanisme de la mémoire olfactive.
-        Une femme qui a tout réussi sauf sentir.
+        Une chambre, une attente, un flacon discret, un vide.
+        Pas de voix-off. Pas de super de marque. Le parfum n’est pas un packshot&nbsp;:
+        c’est une <em>trace</em>. Storyboard + animatic stills — phase standard avant engagement tournage.
       </p>
       <div class="case-meta">
-        <span>25 s · film i2v</span>
-        <span>Parfums & Beauté</span>
-        <span>Film · Social · Print</span>
+        <span>~75″ · animatic stills</span>
+        <span>16:9 · B&amp;W</span>
+        <span>Parfums &amp; Beauté</span>
+        <span>10 plans · hard cuts</span>
         <span>Concept César Cabrera</span>
       </div>
 
       <div class="embed" style="margin-top:28px;">
-        <video controls playsinline preload="metadata" poster="moodboard/01-office-void.jpg">
-          <source src="video/absence.mp4?v=4" type="video/mp4" />
+        <video controls playsinline preload="metadata" poster="storyboard/01-coiffeuse.jpg">
+          <source src="video/animatic_stills.mp4?v=1" type="video/mp4" />
         </video>
       </div>
       <p style="font-size:13px;color:var(--muted);margin:12px 0 0;">
-        9 plans moodboard → grok-imagine-video i2v (JSON) · assemblage FFmpeg.
+        Animatic stills · FFmpeg hard cuts · 70″ plans + 5″ générique fade ·
+        <a href="video/animatic_stills.mp4" style="color:var(--accent)">Télécharger MP4</a>
       </p>
 
       <div class="insight-box">
-        <em>Insight :</em> le parfum ne comble pas le vide — il prouve que l'émotion n'a jamais disparu,
-        seulement été rangée hors de portée du regard.
+        <em>Insight :</em> le temps ne passe pas. Elle comble l’attente par des gestes privés.
+        Un flacon sans nom, à l’échelle de la main. Puis la chambre est vide. Noir.
+        Refus du «&nbsp;nommé&nbsp;» — le parfum reste une présence, pas une claim.
       </div>
 
       <div class="acts">
         <article class="act">
           <div class="act-head">
-            <span class="act-num">Acte I</span>
-            <h3 class="act-title">Les misères du réel</h3>
-            <span class="act-pace">Montage rapide · 18–22 coupes · ~18 s</span>
+            <span class="act-num">Acte I · Chambre</span>
+            <h3 class="act-title">ROOM · WAIT</h3>
+            <span class="act-pace">Plans 01–03 · ~18″</span>
           </div>
           <ul class="beats">
-            <li><span class="time">0:00</span><span><strong>Bureau, lumière froide.</strong> Signature validée. Applaudissements en off. Son étouffé. Elle sourit — yeux ailleurs. Le travail est parfait ; le corps, vide.</span></li>
-            <li><span class="time">0:03</span><span><strong>Ascenseur, miroir.</strong> Rouge à lèvres impeccable. Plan serré main qui se crispe sur la pochette. Rythme saccadé.</span></li>
-            <li><span class="time">0:06</span><span><strong>Nuit, appartement.</strong> Message « vu » sans réponse. Elle relit une ancienne conversation. Lui n'aime plus — ou n'aime qu'à distance. Coupe sur le téléphone qui s'éteint.</span></li>
-            <li><span class="time">0:09</span><span><strong>Timelapse enfants.</strong> Même couloir, mêmes murs : poussette → cartable → porte qui claque → valises. Les adultes partent. Elle reste seule dans le cadre, immobile.</span></li>
-            <li><span class="time">0:14</span><span><strong>Dîner pour une.</strong> Verre de vin. Télévision muette. Temps mort. Accumulation de plans courts — le vide comme rythme.</span></li>
-            <li><span class="time">0:17</span><span><strong>Atelier / parfumerie.</strong> Ralentissement. Un flacon sans logo — <em>Maison L.</em> — posé sur marbre. Elle ne l'achète pas encore : elle le regarde.</span></li>
+            <li><span class="time">0:00</span><span><strong>Coiffeuse.</strong> RPS. Elle retouche le maquillage. Regard caméra. Le cadre la regarde attendre.</span></li>
+            <li><span class="time">0:07</span><span><strong>Lit.</strong> PM. Assise au bord du matelas, mains jointes. Immobilité. Mur abîmé, draps froissés.</span></li>
+            <li><span class="time">0:13</span><span><strong>Mains.</strong> PA. Micro-geste privé — mains croisées, ombre portée. Combler le temps.</span></li>
           </ul>
         </article>
 
         <article class="act">
           <div class="act-head">
-            <span class="act-num">Acte II</span>
-            <h3 class="act-title">Le parfum comme clé</h3>
-            <span class="act-pace">Un souffle · ~6 s</span>
+            <span class="act-num">Acte II · Gestes</span>
+            <h3 class="act-title">GESTURE · TRACE · SEEN</h3>
+            <span class="act-pace">Plans 04–07 · ~30″</span>
           </div>
           <ul class="beats">
-            <li><span class="time">0:19</span><span><strong>Gros plan poignet.</strong> Une vaporisation. Silence total une demi-seconde — puis le son du monde qui revient, étouffé.</span></li>
-            <li><span class="time">0:21</span><span><strong>Macro molécules / lumière dorée.</strong> La matière devient image. Hommage discret à la scène du maître parfumeur : la narine reconnaît avant que la raison comprenne.</span></li>
+            <li><span class="time">0:18</span><span><strong>Armoire.</strong> PM. Manteau tenu — le vêtement comme délai. Toujours l’attente.</span></li>
+            <li><span class="time">0:26</span><span><strong>Spray privé.</strong> RPS. Un seul flacon cristal vierge (taille main). Vaporisation au poignet. Pas un packshot.</span></li>
+            <li><span class="time">0:34</span><span><strong>Regard · hold.</strong> GP. Yeux dans l’objectif. Zéro produit à l’image. Elle sait qu’elle est vue.</span></li>
+            <li><span class="time">0:40</span><span><strong>Fenêtre · nuit.</strong> PA. Skyline, reflets. Documentée, pas en représentation.</span></li>
           </ul>
         </article>
 
         <article class="act">
           <div class="act-head">
-            <span class="act-num">Acte III</span>
-            <h3 class="act-title">Le Prince — premier amour</h3>
-            <span class="act-pace">Mémoire · ~12 s</span>
+            <span class="act-num">Acte III · Absence</span>
+            <h3 class="act-title">TRACE · AFTER · HOLD</h3>
+            <span class="act-pace">Plans 08–10 · ~22″ + générique</span>
           </div>
           <ul class="beats">
-            <li><span class="time">0:22</span><span><strong>Flashback — été, autre lumière.</strong> Elle jeune ; lui, le <em>Prince</em> : pas un roi, l'homme qui l'a vue avant qu'elle s'arme. Main dans la main, rire sans bruit.</span></li>
-            <li><span class="time">0:26</span><span><strong>Danse / bal / rue — selon casting.</strong> Émotion pure, pas mélodrame. 16 mm ou grain chaud. Le passé n'est pas regret : il est <em>preuve</em>.</span></li>
-            <li><span class="time">0:30</span><span><strong>Retour présent.</strong> Même plan qu'au début — elle ferme les yeux. Une larme optionnelle, ou seulement la respiration qui change.</span></li>
-            <li><span class="time">0:33</span><span><strong>Packshot Maison L.</strong> Titre : <em>« Absence »</em>. Baseline : <em>« Ce que le corps n'a pas oublié. »</em> Logo fictif.</span></li>
+            <li><span class="time">0:48</span><span><strong>Insert flacon.</strong> Cristal anonyme sur bois. Lumière seule. Aucune typo, aucun logo.</span></li>
+            <li><span class="time">0:56</span><span><strong>Chambre vide.</strong> PL. Elle n’est plus là. Draps, chaise, lumière résiduelle.</span></li>
+            <li><span class="time">1:04</span><span><strong>Noir · hold.</strong> 6″ full black. Aucun super de marque. Aucun téléphone / raccrochage. → générique fade César Cabrera.</span></li>
           </ul>
         </article>
       </div>
 
       <p class="section-intro" style="margin-top:36px;margin-bottom:0;">
-        <strong>Déclinaisons 360° :</strong> hero 16:9 · stories 9:16 · print · CRM — <em>« Vous vous souvenez encore de lui ? »</em>
+        <strong>Notes de production&nbsp;:</strong> flacon taille main uniquement · verre vierge · 2 beats max ·
+        aucun logo · animatic stills = livrable avant producteur exécutif / devis / tournage.
+        Déclinaisons 360° possibles (hero 16:9 · stories 9:16) après lock créatif.
       </p>
 
       <div class="moodboard" id="moodboard">
-        <p class="section-kicker">Moodboard — 9 frames</p>
-        <h2 style="font-size:28px;margin-bottom:8px;">Héroïne « Absence »</h2>
+        <p class="section-kicker">Storyboard — 10 plans</p>
+        <h2 style="font-size:28px;margin-bottom:8px;">Fiche plans · production</h2>
         <p class="character-bible">
-          <strong>Character bible (lock) :</strong> femme ~38 ans, peau claire taches de rousseur,
-          cheveux courts bruns ondulés, lunettes rectangulaires noires épaisses, blazer noir mat —
-          même personnage sur les 9 plans (présent) ; flashback ~25 ans, même visage sans lunettes.
+          <strong>Lock image&nbsp;:</strong> 16:9 · noir et blanc · chambre d’hôtel psychologique ·
+          caméra fixe · silence · un flacon discret sans marque.
+          Plan 10 = hold noir uniquement (pas d’image téléphone).
         </p>
         <div class="moodboard-grid">
-          <figure class="moodboard-card"><img src="moodboard/01-office-void.jpg" alt="01 Bureau vide" loading="lazy" /><figcaption><strong>01 · Bureau</strong>Acte I — travail parfait, vide</figcaption></figure>
-          <figure class="moodboard-card"><img src="moodboard/02-elevator-mirror.jpg?v=7" alt="02 Ascenseur — miroir, rouge à lèvres, pas de téléphone" loading="lazy" /><figcaption><strong>02 · Ascenseur</strong>Acte I — masque, tension</figcaption></figure>
-          <figure class="moodboard-card"><img src="moodboard/03-phone-night.jpg" alt="03 Nuit téléphone" loading="lazy" /><figcaption><strong>03 · Nuit</strong>Acte I — amour sans retour</figcaption></figure>
-          <figure class="moodboard-card"><img src="moodboard/04-timelapse-hallway.jpg" alt="04 Timelapse" loading="lazy" /><figcaption><strong>04 · Couloir</strong>Acte I — enfants, temps</figcaption></figure>
-          <figure class="moodboard-card"><img src="moodboard/05-dinner-alone.jpg" alt="05 Dîner seule" loading="lazy" /><figcaption><strong>05 · Dîner</strong>Acte I — solitude</figcaption></figure>
-          <figure class="moodboard-card"><img src="moodboard/06-flacon-marbre.jpg" alt="06 Flacon" loading="lazy" /><figcaption><strong>06 · Flacon</strong>Transition — Maison L.</figcaption></figure>
-          <figure class="moodboard-card"><img src="moodboard/07-vaporisation.jpg?v=2" alt="07 Vaporisation" loading="lazy" /><figcaption><strong>07 · Vaporisation</strong>Acte II — la clé</figcaption></figure>
-          <figure class="moodboard-card"><img src="moodboard/08-prince-flashback.jpg?v=2" alt="08 Prince" loading="lazy" /><figcaption><strong>08 · Prince</strong>Acte III — premier amour</figcaption></figure>
-          <figure class="moodboard-card"><img src="moodboard/09-retour-absence.jpg?v=2" alt="09 Retour" loading="lazy" /><figcaption><strong>09 · Retour</strong>Acte III — Absence</figcaption></figure>
+          <figure class="moodboard-card">
+            <img src="storyboard/01-coiffeuse.jpg" alt="Plan 01 Coiffeuse" loading="lazy" />
+            <figcaption>
+              <strong>01 · Coiffeuse · attente</strong>
+              ROOM · RPS · 7″
+              <span class="frame-note">Retouche cils · regard caméra · lumière pratique</span>
+              <span class="prod-line">TC 00:00–00:07 · fixe · cut</span>
+            </figcaption>
+          </figure>
+          <figure class="moodboard-card">
+            <img src="storyboard/02-lit.jpg" alt="Plan 02 Lit" loading="lazy" />
+            <figcaption>
+              <strong>02 · Lit · immobilité</strong>
+              WAIT · PM · 6″
+              <span class="frame-note">Assise bord lit · mains jointes · mur abîmé</span>
+              <span class="prod-line">TC 00:07–00:13 · fixe · cut</span>
+            </figcaption>
+          </figure>
+          <figure class="moodboard-card">
+            <img src="storyboard/03-mains.jpg" alt="Plan 03 Mains" loading="lazy" />
+            <figcaption>
+              <strong>03 · Mains · micro-geste</strong>
+              GESTURE · PA · 5″
+              <span class="frame-note">Mains croisées · ombre portée · mur nu</span>
+              <span class="prod-line">TC 00:13–00:18 · fixe · cut</span>
+            </figcaption>
+          </figure>
+          <figure class="moodboard-card">
+            <img src="storyboard/04-armoire.jpg" alt="Plan 04 Armoire" loading="lazy" />
+            <figcaption>
+              <strong>04 · Armoire · manteau</strong>
+              GESTURE · PM · 8″
+              <span class="frame-note">Manteau tenu · hésitation · cintres</span>
+              <span class="prod-line">TC 00:18–00:26 · fixe · cut</span>
+            </figcaption>
+          </figure>
+          <figure class="moodboard-card">
+            <img src="storyboard/05-spray.jpg" alt="Plan 05 Spray" loading="lazy" />
+            <figcaption>
+              <strong>05 · Spray privé</strong>
+              TRACE · RPS · 8″
+              <span class="frame-note">Un flacon vierge · poignet · pas packshot</span>
+              <span class="prod-line">TC 00:26–00:34 · fixe · cut</span>
+            </figcaption>
+          </figure>
+          <figure class="moodboard-card">
+            <img src="storyboard/06-regard.jpg" alt="Plan 06 Regard" loading="lazy" />
+            <figcaption>
+              <strong>06 · Regard · hold</strong>
+              SEEN · GP · 6″
+              <span class="frame-note">Visage · fond noir · zéro produit</span>
+              <span class="prod-line">TC 00:34–00:40 · fixe · cut</span>
+            </figcaption>
+          </figure>
+          <figure class="moodboard-card">
+            <img src="storyboard/07-fenetre.jpg" alt="Plan 07 Fenêtre" loading="lazy" />
+            <figcaption>
+              <strong>07 · Fenêtre · nuit</strong>
+              WAIT · PA · 8″
+              <span class="frame-note">Baie · skyline · reflets vitre</span>
+              <span class="prod-line">TC 00:40–00:48 · fixe · cut</span>
+            </figcaption>
+          </figure>
+          <figure class="moodboard-card">
+            <img src="storyboard/08-insert-flacon.jpg" alt="Plan 08 Insert flacon" loading="lazy" />
+            <figcaption>
+              <strong>08 · Insert · flacon</strong>
+              TRACE · Insert · 8″
+              <span class="frame-note">Cristal anonyme · bois · lumière seule</span>
+              <span class="prod-line">TC 00:48–00:56 · fixe · cut</span>
+            </figcaption>
+          </figure>
+          <figure class="moodboard-card">
+            <img src="storyboard/09-chambre-vide.jpg" alt="Plan 09 Chambre vide" loading="lazy" />
+            <figcaption>
+              <strong>09 · Chambre vide</strong>
+              AFTER · PL · 8″
+              <span class="frame-note">Lit défait · chaise · aucun corps</span>
+              <span class="prod-line">TC 00:56–01:04 · fade black</span>
+            </figcaption>
+          </figure>
+          <figure class="moodboard-card">
+            <img src="storyboard/10-noir.jpg" alt="Plan 10 Noir" loading="lazy" />
+            <figcaption>
+              <strong>10 · Noir · hold</strong>
+              HOLD · Black · 6″
+              <span class="frame-note">Full black · pas de super · pas de téléphone</span>
+              <span class="prod-line">TC 01:04–01:10 · hold → générique 5″</span>
+            </figcaption>
+          </figure>
         </div>
+      </div>
+
+      <div class="shot-fiche" id="fiche-plans" aria-label="Fiche plans détaillée">
+        <p class="section-kicker" style="margin-top:48px;">Fiche plans détaillée</p>
+        <h2 style="font-size:28px;margin-bottom:8px;">Production · plan par plan</h2>
+
+        <article>
+          <img src="storyboard/01-coiffeuse.jpg" alt="" loading="lazy" />
+          <div>
+            <p class="shot-head">Plan 01 · TC 00:00–00:07 · 7″ · ROOM</p>
+            <h4>Coiffeuse · attente</h4>
+            <dl>
+              <dt>Échelle</dt><dd>RPS → buste</dd>
+              <dt>Caméra</dt><dd>Fixe · hauteur yeux · 3/4 face</dd>
+              <dt>Lieu</dt><dd>Chambre d’hôtel · coiffeuse · lampadaire bas</dd>
+              <dt>Action</dt><dd><strong>Retouche maquillage (cils).</strong> Regard vers l’objectif. Pas de sourire. Le temps ne passe pas.</dd>
+              <dt>Cadre</dt><dd>B&amp;W · nuisette dentelle · table de toilette hors focus · lumière pratique unique</dd>
+              <dt>Son</dt><dd>Silence · ambiance chambre optionnelle (très bas)</dd>
+              <dt>Trans.</dt><dd>Cut</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article>
+          <img src="storyboard/02-lit.jpg" alt="" loading="lazy" />
+          <div>
+            <p class="shot-head">Plan 02 · TC 00:07–00:13 · 6″ · WAIT</p>
+            <h4>Lit · immobilité</h4>
+            <dl>
+              <dt>Échelle</dt><dd>PM · corps assis</dd>
+              <dt>Caméra</dt><dd>Fixe · légèrement large · axe frontal</dd>
+              <dt>Lieu</dt><dd>Même chambre · lit défait · mur abîmé · lampe de chevet</dd>
+              <dt>Action</dt><dd><strong>Assise au bord du matelas,</strong> mains jointes sur les genoux. Elle attend.</dd>
+              <dt>Cadre</dt><dd>B&amp;W · débardeur noir · draps froissés · téléphone de chevet en fond (non actionné)</dd>
+              <dt>Son</dt><dd>Silence</dd>
+              <dt>Trans.</dt><dd>Cut</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article>
+          <img src="storyboard/03-mains.jpg" alt="" loading="lazy" />
+          <div>
+            <p class="shot-head">Plan 03 · TC 00:13–00:18 · 5″ · GESTURE</p>
+            <h4>Mains · micro-geste</h4>
+            <dl>
+              <dt>Échelle</dt><dd>PA / RPS · mur nu</dd>
+              <dt>Caméra</dt><dd>Fixe · 3/4 · ombre portée nette</dd>
+              <dt>Lieu</dt><dd>Coin de chambre · fond clair</dd>
+              <dt>Action</dt><dd><strong>Mains croisées sur la poitrine.</strong> Tension discrète. Geste privé pour tuer l’attente.</dd>
+              <dt>Cadre</dt><dd>B&amp;W · nuisette · silhouette d’ombre · espace négatif à gauche</dd>
+              <dt>Son</dt><dd>Silence</dd>
+              <dt>Trans.</dt><dd>Cut</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article>
+          <img src="storyboard/04-armoire.jpg" alt="" loading="lazy" />
+          <div>
+            <p class="shot-head">Plan 04 · TC 00:18–00:26 · 8″ · GESTURE</p>
+            <h4>Armoire · manteau</h4>
+            <dl>
+              <dt>Échelle</dt><dd>PM</dd>
+              <dt>Caméra</dt><dd>Fixe · hauteur yeux · 3/4</dd>
+              <dt>Lieu</dt><dd>Dressing / armoire ouverte</dd>
+              <dt>Action</dt><dd><strong>Elle tient un manteau sombre,</strong> hésite. Le vêtement comme délai.</dd>
+              <dt>Cadre</dt><dd>B&amp;W · cintres · lampadaire · fauteuil flou · pas de logo textile</dd>
+              <dt>Son</dt><dd>Silence · frottement tissu optionnel</dd>
+              <dt>Trans.</dt><dd>Cut</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article>
+          <img src="storyboard/05-spray.jpg" alt="" loading="lazy" />
+          <div>
+            <p class="shot-head">Plan 05 · TC 00:26–00:34 · 8″ · TRACE</p>
+            <h4>Spray privé</h4>
+            <dl>
+              <dt>Échelle</dt><dd>RPS</dd>
+              <dt>Caméra</dt><dd>Fixe · 3/4 · focus mains + flacon</dd>
+              <dt>Lieu</dt><dd>Chambre · lit + chevet soft</dd>
+              <dt>Action</dt><dd><strong>Un seul flacon cristal vierge.</strong> Vaporisation au poignet. Intime — pas un packshot.</dd>
+              <dt>Cadre</dt><dd>B&amp;W · peignoir · un flacon uniquement · aucun logo / monogramme</dd>
+              <dt>Son</dt><dd>Silence · un «&nbsp;psh&nbsp;» optionnel</dd>
+              <dt>Trans.</dt><dd>Cut</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article>
+          <img src="storyboard/06-regard.jpg" alt="" loading="lazy" />
+          <div>
+            <p class="shot-head">Plan 06 · TC 00:34–00:40 · 6″ · SEEN</p>
+            <h4>Regard · hold</h4>
+            <dl>
+              <dt>Échelle</dt><dd>GP visage</dd>
+              <dt>Caméra</dt><dd>Fixe · face légèrement 3/4 · fond noir</dd>
+              <dt>Lieu</dt><dd>Abstraction du cadre</dd>
+              <dt>Action</dt><dd><strong>Regard direct dans l’objectif.</strong> Hold. Aucun produit à l’image.</dd>
+              <dt>Cadre</dt><dd>B&amp;W · peau lumineuse · bretelle dentelle · zéro flacon</dd>
+              <dt>Son</dt><dd>Silence total</dd>
+              <dt>Trans.</dt><dd>Cut</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article>
+          <img src="storyboard/07-fenetre.jpg" alt="" loading="lazy" />
+          <div>
+            <p class="shot-head">Plan 07 · TC 00:40–00:48 · 8″ · WAIT</p>
+            <h4>Fenêtre · nuit</h4>
+            <dl>
+              <dt>Échelle</dt><dd>PA / moyen</dd>
+              <dt>Caméra</dt><dd>Fixe · profil 3/4 · contre-jour ville</dd>
+              <dt>Lieu</dt><dd>Baie vitrée · skyline de nuit</dd>
+              <dt>Action</dt><dd><strong>Debout près de la fenêtre.</strong> Dehors puis vers nous. Documentée, pas en représentation.</dd>
+              <dt>Cadre</dt><dd>B&amp;W · nuisette · reflets vitre · bokeh urbain</dd>
+              <dt>Son</dt><dd>Silence · lointain urbain optionnel</dd>
+              <dt>Trans.</dt><dd>Cut</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article>
+          <img src="storyboard/08-insert-flacon.jpg" alt="" loading="lazy" />
+          <div>
+            <p class="shot-head">Plan 08 · TC 00:48–00:56 · 8″ · TRACE</p>
+            <h4>Insert · flacon</h4>
+            <dl>
+              <dt>Échelle</dt><dd>Insert / GP objet</dd>
+              <dt>Caméra</dt><dd>Fixe · rasant · lumière latérale</dd>
+              <dt>Lieu</dt><dd>Table de chevet · bois</dd>
+              <dt>Action</dt><dd><strong>Flacon cristal anonyme posé.</strong> Aucune main. La lumière seule «&nbsp;nomme&nbsp;» le produit.</dd>
+              <dt>Cadre</dt><dd>B&amp;W · verre vierge · ombre portée · pas de packshot glamour</dd>
+              <dt>Son</dt><dd>Silence</dd>
+              <dt>Trans.</dt><dd>Cut</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article>
+          <img src="storyboard/09-chambre-vide.jpg" alt="" loading="lazy" />
+          <div>
+            <p class="shot-head">Plan 09 · TC 00:56–01:04 · 8″ · AFTER</p>
+            <h4>Chambre vide</h4>
+            <dl>
+              <dt>Échelle</dt><dd>PL / d’ensemble</dd>
+              <dt>Caméra</dt><dd>Fixe · hauteur poitrine</dd>
+              <dt>Lieu</dt><dd>Chambre d’hôtel · lit défait · chaise</dd>
+              <dt>Action</dt><dd><strong>Elle n’est plus là.</strong> Présence résiduelle. L’absence devient le sujet.</dd>
+              <dt>Cadre</dt><dd>B&amp;W · linge froissé · deux lampes · chaise vide · aucun corps</dd>
+              <dt>Son</dt><dd>Silence</dd>
+              <dt>Trans.</dt><dd>Fade to black</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article>
+          <img src="storyboard/10-noir.jpg" alt="" loading="lazy" />
+          <div>
+            <p class="shot-head">Plan 10 · TC 01:04–01:10 · 6″ · HOLD</p>
+            <h4>Noir · hold</h4>
+            <dl>
+              <dt>Échelle</dt><dd>—</dd>
+              <dt>Caméra</dt><dd>Full black · no picture</dd>
+              <dt>Lieu</dt><dd>—</dd>
+              <dt>Action</dt><dd><strong>Hold noir.</strong> Aucun super de marque. Refus du pack claim.</dd>
+              <dt>Cadre</dt><dd>100&nbsp;% noir · pas d’image téléphone / raccrochage</dd>
+              <dt>Son</dt><dd>Silence total</dd>
+              <dt>Trans.</dt><dd>Hold → générique fade (César Cabrera · 5″)</dd>
+            </dl>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -527,8 +862,8 @@
 
     <section class="cta-block" id="contact">
       <h2>Disponible Paris · Neuilly</h2>
-      <p>Case study « Absence » — film i2v & moodboard en ligne · concept personnel Parfums Beauté.</p>
-      <a class="btn" href="mailto:cesarcabrera@agenceai.app">cesarcabrera@agenceai.app</a>
+      <p>Case study « Absence » — storyboard + animatic stills · concept personnel · spec Parfums Beauté.</p>
+      <a class="btn" href="mailto:extendedvoid.prod@gmail.com">extendedvoid.prod@gmail.com</a>
     </section>
 
     <footer>
