@@ -517,6 +517,70 @@
       font-style: italic;
     }
 
+    /* —— France Travail : ATS + lettre (copy-paste) —— */
+    .ft-box {
+      background: var(--surface);
+      margin: 0 -28px;
+      padding: 56px 28px 48px;
+      border-top: 1px solid var(--hairline);
+    }
+    .ft-intro {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 62ch;
+      margin: 0 0 28px;
+      line-height: 1.55;
+    }
+    .ft-panel {
+      margin-bottom: 36px;
+      border: 1px solid var(--hairline);
+      background: var(--canvas);
+      padding: 20px;
+    }
+    .ft-panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .ft-panel-head h3 {
+      font-family: var(--display);
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0;
+      flex: 1;
+    }
+    .ft-panel textarea {
+      width: 100%;
+      min-height: 220px;
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1.5;
+      color: var(--ink);
+      background: #faf9f5;
+      border: 1px solid var(--hairline);
+      padding: 14px;
+      resize: vertical;
+      white-space: pre;
+      overflow-x: auto;
+    }
+    .ft-panel .hint {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 10px 0 0;
+    }
+    .ft-panel .copy-ok {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .ft-panel .copy-ok.show { opacity: 1; }
+
     footer {
       padding: 24px 0 40px;
       font-size: 12px; color: var(--muted);
@@ -546,6 +610,7 @@
         <li><a href="#work">Œuvres</a></li>
         <li><a href="#case-study">Case study</a></li>
         <li><a href="#cv">CV</a></li>
+        <li><a href="#france-travail">ATS</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a class="pill" href="mailto:extendedvoid.prod@gmail.com">Contact</a>
@@ -1040,6 +1105,9 @@
           <a class="btn" href="assets/CV_Cesar_Cabrera_CR_Films_Images.pdf" download>
             Télécharger PDF
           </a>
+          <a class="btn btn-ghost" href="#france-travail" style="margin-top:8px;display:inline-block">
+            Version ATS (copier)
+          </a>
         </div>
       </div>
 
@@ -1238,24 +1306,103 @@
       </div>
     </section>
 
+    <section id="france-travail" class="ft-box">
+      <p class="section-kicker">Candidature · France Travail</p>
+      <h2>CV ATS &amp; lettre — copier-coller</h2>
+      <p class="ft-intro">
+        Textes alignés sur ce one-pager (Absence, festivals vérifiés, mots-clés de l’offre).
+        À coller dans les champs France Travail ou à joindre en <code>.txt</code>.
+        Offre n°&nbsp;4406638 — CDI Concepteur-Rédacteur Senior Films et Images · Parfums Beauté.
+      </p>
+
+      <div class="ft-panel">
+        <div class="ft-panel-head">
+          <h3>CV · version ATS (texte brut)</h3>
+          <button type="button" class="btn" data-copy="ats-cv">Copier le CV</button>
+          <a class="btn btn-ghost" href="assets/CV_ATS_FranceTravail.txt" download>Télécharger .txt</a>
+          <span class="copy-ok" id="ok-ats-cv" aria-live="polite">Copié</span>
+        </div>
+        <textarea id="ats-cv" readonly spellcheck="false" aria-label="CV ATS pour France Travail">Chargement…</textarea>
+        <p class="hint">Même contenu que le CV web + mots-clés offre en clair (parseur ATS / champs libres FT).</p>
+      </div>
+
+      <div class="ft-panel">
+        <div class="ft-panel-head">
+          <h3>Lettre de motivation</h3>
+          <button type="button" class="btn" data-copy="ats-lettre">Copier la lettre</button>
+          <a class="btn btn-ghost" href="assets/Lettre_motivation_Chanel_CR_Films_Images.txt" download>Télécharger .txt</a>
+          <span class="copy-ok" id="ok-ats-lettre" aria-live="polite">Copié</span>
+        </div>
+        <textarea id="ats-lettre" readonly spellcheck="false" aria-label="Lettre de motivation">Chargement…</textarea>
+        <p class="hint">
+          Ton plus personnel et conversationnel (pourquoi ce poste), style Maison&nbsp;:
+          précis, humble, sans jargon tech. Portfolio «&nbsp;Absence&nbsp;» à jour.
+        </p>
+      </div>
+    </section>
+
     <section class="cta-block" id="contact">
       <h2>Disponible Paris · Neuilly</h2>
       <p>
-        Case study «&nbsp;Absence&nbsp;» + CV adapté CR Films &amp; Images ·
+        Case study «&nbsp;Absence&nbsp;» · CV ATS · lettre ·
         concept personnel · spec Parfums Beauté.
       </p>
       <a class="btn" href="mailto:extendedvoid.prod@gmail.com">extendedvoid.prod@gmail.com</a>
       <a class="btn btn-ghost" href="assets/CV_Cesar_Cabrera_CR_Films_Images.pdf" download>CV PDF</a>
+      <a class="btn btn-ghost" href="#france-travail">Copier ATS</a>
     </section>
 
     <footer>
       <span>© 2026 César Cabrera</span>
       <span>
         <a href="#cv">CV</a> ·
+        <a href="#france-travail">ATS</a> ·
         <a href="https://www.canalplus.com/divertissement/deja-vu/h/17134696_50001" target="_blank" rel="noopener">Déjà Vu</a> ·
         <a href="https://github.com/extendedvoidvoid/atelier-synesthesie/tree/main/portfolio/chanel" target="_blank" rel="noopener">Source</a>
       </span>
     </footer>
   </div>
+  <script>
+    (function () {
+      function load(id, url) {
+        return fetch(url)
+          .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+          .then(function (t) {
+            var el = document.getElementById(id);
+            if (el) el.value = t;
+          })
+          .catch(function () {
+            var el = document.getElementById(id);
+            if (el) el.value = "Ouvrir le fichier .txt via le bouton Télécharger.";
+          });
+      }
+      load("ats-cv", "assets/CV_ATS_FranceTravail.txt");
+      load("ats-lettre", "assets/Lettre_motivation_Chanel_CR_Films_Images.txt");
+
+      document.querySelectorAll("[data-copy]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var id = btn.getAttribute("data-copy");
+          var ta = document.getElementById(id);
+          if (!ta) return;
+          ta.select();
+          ta.setSelectionRange(0, ta.value.length);
+          var ok = document.getElementById("ok-" + id);
+          function flash() {
+            if (ok) {
+              ok.classList.add("show");
+              setTimeout(function () { ok.classList.remove("show"); }, 1600);
+            }
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(ta.value).then(flash).catch(function () {
+              try { document.execCommand("copy"); flash(); } catch (e) {}
+            });
+          } else {
+            try { document.execCommand("copy"); flash(); } catch (e) {}
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
