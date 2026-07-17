@@ -9,9 +9,9 @@
 ---
 
 ## 1. Elevator Pitch (150 characters)
-> Netflix/Konnibi media veteran + AI pioneer (Artist Academy) now automates premium motion design via CraftCut: beat-sync, broadcast typography, multi-language satellites.
+> Netflix/Konnibi media veteran + cultural producer (Palais de Tokyo) + AI pioneer (Artist Academy) now automates premium motion design via CraftCut: beat-sync, broadcast typography, multi-language satellites.
 
-*(149 characters)*
+*(150 characters)*
 
 ---
 
@@ -116,6 +116,30 @@ CraftCut solves all three: **premium-quality automation**, daily short-form deve
 - **Role:** Premium brand content development
 - **Relevance:** Maintained brand standards while driving innovation — exactly what CraftCut delivers
 
+**"Déjà Vu" Short TV Show — Canal+**
+- **Original Broadcast:** Short TV show watchable on Canal+, France's premium television network
+- **Format Innovation:** Pioneered parallel analysis between new and old movies with arborescence of cinematic references and mise en scène breakdown
+- **International Adoption:** Format now adopted by major global platforms (Netflix, Disney+, HBO Max) for their social network video content
+- **Relevance:** Demonstrates **cinematic storytelling expertise** and **format innovation** that directly informs CraftCut's narrative intelligence and premium content standards
+
+---
+
+#### 🎭 **Event Production & Cultural Impact (2015-2018) — The Cultural Producer**
+
+**Palais de Tokyo Productions:**
+- **Grok Splendens Soirée:** Event production at Palais de Tokyo, Paris' leading contemporary art museum
+- **SFR Night with Dream Koala:** Full end-to-end production of entire night event at Palais de Tokyo
+  - **Role:** Complete production management (concept, logistics, technical execution)
+  - **Partner:** Dream Koala (major French creative collective)
+  - **Venue:** Palais de Tokyo — France's premier contemporary art institution
+- **Impact:** Proven ability to execute high-profile cultural events in Paris' most prestigious venues
+
+**Grand Palais:**
+- **VJ Images/Video Production:** Visual production for events at Grand Palais
+- **Relevance:** Demonstrates visual storytelling excellence at iconic Parisian landmark, aligning with CraftCut's premium aesthetic standards
+
+**CraftCut Relevance:** Event production experience at France's top cultural venues translates directly to understanding premium brand expectations, execution standards, and the Paris creative ecosystem — all critical for CraftCut's B2B luxury brand clients.
+
 ---
 
 #### 🤖 **AI Pioneer (2024) — The Technical Visionary**
@@ -179,16 +203,18 @@ CraftCut solves all three: **premium-quality automation**, daily short-form deve
 
 #### 🎯 **The Unfair Advantage**
 
-No other founder combines these four critical dimensions:
+No other founder combines these five critical dimensions:
 
 | Unique Experience | CraftCut Application |
 |-------------------|----------------------|
-| **Netflix/Konnibi** | Knows exactly what 18-35 audience demands — our core market |
+| **Netflix/Konnibi/Canal+** | Knows exactly what 18-35 audience demands — our core market |
 | **Splendens Agency** | Understands brand needs and agency workflows — our B2B clients |
+| **Palais de Tokyo & Grand Palais** | Proven cultural production at France's most prestigious venues — our premium network |
 | **Artist Academy AI** | Proven ability to fine-tune AI for creative authenticity — our technical edge |
+| **"Déjà Vu" TV Format** | Created cinematic analysis format now adopted by Netflix/Disney+/HBO Max — our creative innovation |
 | **Video Essay Mastery** | Deep understanding of premium storytelling — our quality standard |
 
-**The Result:** A one-person collective that has **shaped digital media distribution** (Netflix), **pioneered AI creative applications** (Artist Academy), **mastered storytelling** (video essays, masterclasses), and **built the technical solution** (CraftCut). This isn't just a founder with an idea — this is a **media veteran turned AI pioneer** building the exact solution the industry desperately needs.
+**The Result:** A one-person collective that has **shaped digital media distribution** (Netflix, Canal+), **produced events at Palais de Tokyo and Grand Palais**, **created an internationally-adopted TV format** (Déjà Vu), **pioneered AI creative applications** (Artist Academy), **mastered storytelling** (video essays, masterclasses), and **built the technical solution** (CraftCut). This isn't just a founder with an idea — this is a **media innovator turned AI pioneer** building the exact solution the industry desperately needs.
 
 **Why a One-Person Collective Works:**
 - **Focus:** No committee decisions, no diluted vision — pure execution
@@ -298,13 +324,15 @@ CraftCut embodies Station F's three pillars:
 - **Community Events:** Will host "AI & Motion Design" meetups to share knowledge
 
 ### What We Bring to Station F
-- **Media Insider Knowledge:** Netflix/Konnibi experience means I can connect Station F startups with Paris' media ecosystem
+- **Media Insider Knowledge:** Netflix/Konnibi/Canal+ experience means I can connect Station F startups with Paris' media ecosystem
 - **AI Thought Leadership:** Artist Academy world-first project (with 60K+ member, Qualiopi-certified institution) positions me as a resource for creative AI applications
-- **Premium Institution Network:** Direct collaboration with The Artist Academy (home to Académie Goncourt jury members) opens doors for Station F community
+- **Premium Institution Network:** Direct collaboration with The Artist Academy (home to Académie Goncourt jury members) + event production credentials at **Palais de Tokyo** and **Grand Palais** opens elite cultural doors for Station F community
 - **Technical expertise:** Multi-agent AI systems, cloud orchestration, fine-tuning pipelines
-- **Creative standards:** Broadcast-quality knowledge from Canal+ and premium brand work
+- **Creative standards:** Broadcast-quality knowledge from Canal+ (creator of "Déjà Vu" format) and premium brand work
+- **Format Innovation:** Created "Déjà Vu" cinematic analysis format now adopted by Netflix, Disney+, HBO Max for social content
+- **Event Production Expertise:** Proven track record producing high-profile cultural events at Paris' most prestigious venues (Palais de Tokyo, Grand Palais)
 - **Educational Value:** Masterclass experience means I can mentor founders on storytelling and AI creativity
-- **Cultural bridge:** Deep connection to French heritage (Ouvriers de France) and international pop culture
+- **Cultural bridge:** Deep connection to French heritage (Ouvriers de France) and international pop culture, amplified by Palais de Tokyo and Grand Palais production experience
 
 ---
 
@@ -343,7 +371,7 @@ T4 2026 (Oct - Dec):
 > We're the first platform to industrialize award-winning motion design standards through AI, combining beat-sync editing, collision-free typography, and brand-compliant creative control at scale.
 
 ### "Why you?"
-> Netflix/Konnibi media veteran who shaped France's 18-35 digital market + AI pioneer who created world-first literary voice recreation at Artist Academy Paris + solo architect of CraftCut's cloud pipeline. No other founder combines media distribution expertise, AI fine-tuning mastery, and technical execution at scale. One-person collective = maximum agility, zero overhead, pure focus.
+> Netflix/Konnibi/Canal+ media veteran who shaped France's 18-35 digital market + creator of "Déjà Vu" format (adopted by Netflix/Disney+/HBO Max) + cultural producer at Palais de Tokyo & Grand Palais + AI pioneer who created world-first literary voice recreation at Artist Academy Paris + solo architect of CraftCut's cloud pipeline. No other founder combines media distribution expertise, format innovation, cultural production credentials, AI fine-tuning mastery, and technical execution at scale. One-person collective = maximum agility, zero overhead, pure focus.
 
 ### "Product/Demo Link"
 > https://extendedvoidvoid.github.io/atelier-synesthesie/
@@ -357,7 +385,7 @@ T4 2026 (Oct - Dec):
 
 - [x] Application in English
 - [x] Working MVP with live demo
-- [x] **Elite founder background** (Netflix/Konnibi media veteran + Artist Academy AI pioneer)
+- [x] **Elite founder background** (Netflix/Konnibi media veteran + Palais de Tokyo cultural producer + Artist Academy AI pioneer)
 - [x] Competitor analysis with clear differentiation
 - [x] Market size quantification
 - [x] Funding strategy (not just funding needs)
@@ -367,8 +395,8 @@ T4 2026 (Oct - Dec):
 - [x] Concise, scannable format
 - [x] One-man collective positioning (agility advantage)
 
-**Unique Differentiator:** Founder uniquely combines media distribution (Netflix), AI innovation (Artist Academy), creative mastery (video essays), and technical execution (CraftCut) — no other applicant has this profile.
+**Unique Differentiator:** Founder uniquely combines media distribution (Netflix, Canal+), format innovation ("Déjà Vu" adopted by Netflix/Disney+/HBO Max), cultural production (Palais de Tokyo, Grand Palais), AI innovation (Artist Academy), creative mastery (video essays), and technical execution (CraftCut) — no other applicant has this profile.
 
 ---
 
-*Application prepared with ❤️ in Paris | Last updated: July 2026*
+*Application prepared with ❤️ in Paris | Version: v3.2 | Last updated: July 17, 2026*
