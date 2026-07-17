@@ -1,0 +1,18 @@
+# CraftCut - AI Video Automation Platform
+# Python 3.10+ required
+
+# Core dependencies
+requests>=2.33.1
+playwright>=1.60.0
+
+# Development dependencies
+pytest>=9.0.0
+pytest-cov>=4.0.0
+flake8>=6.0.0
+black>=26.0.0
+isort>=8.0.0
+mypy>=2.0.0
+pre-commit>=4.0.0
+
+# Type checking support
+typing-extensions>=4.0.0
