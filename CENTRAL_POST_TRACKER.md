@@ -17,46 +17,41 @@
 
 | ID | Title / Channel | Theme / Focus | Local File Path | Live CDN URL | Target Tags | Post Status |
 |----|-----------------|---------------|-----------------|--------------|-------------|-------------|
-| **Ch. 01** | **Olivia Rodrigo (179)** | Beat-synced typography & subtitle alignment | `/Users/alexphoenix/projects/atelier-synesthesie/video1.mp4` | [video1.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video1.mp4) | `@Olivia Rodrigo` `@Geffen Records` `@YouTube` | `[ ] Posted` |
+| **Ch. 01** | **Olivia Rodrigo (179)** | Beat-synced typography & subtitle alignment | `/Users/alexphoenix/projects/atelier-synesthesie/video1.mp4` | [video1.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video1.mp4) | `@Olivia Rodrigo` | `[ ] Posted` |
 | **Ch. 02** | **Chanel Haute Couture & Cannes** | Parallel mapping of runway robes to red carpet appearances | `/Users/alexphoenix/projects/atelier-synesthesie/video2.mp4` | [video2.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video2.mp4) | `@CHANEL` `@Canal+` | `[ ] Posted` |
-| **Ch. 03** | **Kanye West Graduation** | Transient-driven spatial album cover layout | `/Users/alexphoenix/projects/atelier-synesthesie/video3.mp4` | [video3.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video3.mp4) | `@Kanye West` `@Def Jam Recordings` | `[ ] Posted` |
+| **Ch. 03** | **Kanye West Graduation** | Transient-driven spatial album cover layout | `/Users/alexphoenix/projects/atelier-synesthesie/video3.mp4` | [video3.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video3.mp4) | `@Kanye West` | `[ ] Posted` |
 
 ---
 
-## 📝 LinkedIn Post Copy (Optimized for César's Profile)
+## 📝 LinkedIn Post Copy (ADHD/Autistic Style — Literal, Technical, Unlinked)
 
 ### 📌 Ch. 01 — Olivia Rodrigo (Typography Automation)
 ```text
-Vertical video requires a different kind of architectural precision. Rather than relying on rigid templates, we synthesize beat-sync transitions, Swiss typographic layout envelopes, and mobile safe-zones directly in the rendering pipeline.
+Démonstration technique : moteur de rendu vidéo autonome. 
+Aucun modèle rigide. Les transitoires de la piste audio d'Olivia Rodrigo contrôlent dynamiquement l'affichage, l'alignement et le rythme de la typographie verticalement. Zéro collision d'interface.
 
-This is a test of our autonomous media engine, translating @Olivia Rodrigo's audio transients into typography that respects editorial rhythm without UI collision.
-
-🔗 Live Showcase: https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/
-📂 Open-Source Engine: https://github.com/extendedvoidvoid/cesar-cabrera-cesar-plus
+Technical demonstration: autonomous video rendering engine. 
+Zero templates. Audio transients from Olivia Rodrigo's track dynamically control vertical typographic alignment and rhythm. Zero UI collision.
 ```
 
 ---
 
 ### 📌 Ch. 02 — Chanel Couture & Cannes (Robes Parallel)
 ```text
-How do you trace the lineage of a silhouette from the runway to the red carpet?
+Parallèle visuel strict : défilé Haute Couture @CHANEL confronté aux images officielles de @Canal+ au Festival de Cannes. 
+Analyse de la silhouette du podium au tapis rouge. Rythme éditorial précis unissant mode, cinéma et architecture.
 
-We built a visual parallel mapping the robes of the @CHANEL Haute Couture show directly against their physical appearances at the @Canal+ Cannes Film Festival. Our engine compiles these high-specification visual details, enforcing a continuous, sovereign editorial rhythm that links fashion, cinema, and architecture in a single vertical canvas.
-
-🔗 Live Showcase: https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/
-📂 Open-Source Engine: https://github.com/extendedvoidvoid/cesar-cabrera-cesar-plus
+Strict visual parallel: @CHANEL Haute Couture show contrasted with official @Canal+ Cannes Film Festival footage. 
+Analyzing the silhouette from runway to red carpet. Precise editorial rhythm linking fashion, cinema, and architecture.
 ```
 
 ---
 
 ### 📌 Ch. 03 — Kanye West Graduation (Album Sleeve Mapping)
 ```text
-Translating the static canvas of iconic album sleeves into responsive vertical motion.
+Mise en mouvement d'une pochette d'album iconique. Une extraction des fréquences de l'enveloppe audio de @Kanye West mappée sur le mouvement spatial pour donner vie à la pochette.
 
-This is a transient-driven, audio-reactive layout test of @Kanye West's Graduation. Our pipeline extracts audio envelope frequencies and dynamically maps them to spatial motion, giving the physical sleeve a digital breath.
-
-🔗 Live Showcase: https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/
-📂 Open-Source Engine: https://github.com/extendedvoidvoid/cesar-cabrera-cesar-plus
+Bringing an iconic album sleeve to life. Extracting @Kanye West's audio envelope frequencies and mapping them directly to spatial motion to animate the physical artwork.
 ```
 
 ---
