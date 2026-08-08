@@ -313,6 +313,43 @@
     footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--ink); }
 
+    /* ============ HERO COLUMNS ============ */
+    .hero-columns {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 36px;
+    }
+    .hero-portrait {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 1px solid var(--hairline);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+      object-fit: cover;
+    }
+    @media (min-width: 860px) {
+      .hero-columns {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 48px;
+      }
+      .hero-left {
+        flex: 1;
+        max-width: 72%;
+      }
+      .hero-right {
+        flex: 0 0 22%;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .hero-portrait {
+        width: 200px;
+        height: 200px;
+        border-radius: 12px;
+      }
+    }
+
     /* ============ RESPONSIVE ============ */
     @media (max-width: 880px) {
       .nav ul { display: none; }
@@ -347,14 +384,21 @@
 
   <main>
     <section class="wrap hero reveal" data-od-id="hero">
-      <div class="ambient-glow"></div>
-      <span class="eyebrow"><span class="dot"></span>Station F Pre-Incubation · Build 2.0.0</span>
-      <h1>An industrial printing press for <em>sovereign vertical media</em>.</h1>
-      <p class="lede">CraftCut develops high-fidelity, autonomous media pipelines. Rather than simple templates, our technology operates as an elite digital printing press—translating rich architectural archives, haute couture, and the noble gestures of <i>Les Ouvriers de France</i> into infinite variations of beat-synced vertical cinema. Under lock, key, and complete sovereignty.</p>
-      <div class="actions">
-        <a href="#roadmap" class="btn btn-primary" style="text-decoration:none;">View our initiatives</a>
-        <a href="https://github.com/extendedvoidvoid/cesar-cabrera-cesar-plus" class="btn-link" target="_blank">Explore the repository</a>
-        <span class="keystroke">Station F 2026</span>
+      <div class="hero-columns">
+        <div class="hero-left">
+          <div class="ambient-glow"></div>
+          <span class="eyebrow"><span class="dot"></span>Station F Pre-Incubation · Build 2.0.0</span>
+          <h1>An industrial printing press for <em>sovereign vertical media</em>.</h1>
+          <p class="lede">CraftCut develops high-fidelity, autonomous media pipelines. Rather than simple templates, our technology operates as an elite digital printing press—translating rich architectural archives, haute couture, and the noble gestures of <i>Les Ouvriers de France</i> into infinite variations of beat-synced vertical cinema. Under lock, key, and complete sovereignty.</p>
+          <div class="actions">
+            <a href="#roadmap" class="btn btn-primary" style="text-decoration:none;">View our initiatives</a>
+            <a href="https://github.com/extendedvoidvoid/cesar-cabrera-cesar-plus" class="btn-link" target="_blank">Explore the repository</a>
+            <span class="keystroke">Station F 2026</span>
+          </div>
+        </div>
+        <div class="hero-right">
+          <img class="hero-portrait" src="portfolio/chanel/assets/portrait.jpg" alt="César Cabrera" />
+        </div>
       </div>
 
       <!-- 3-COLUMN VIDEO SHOWCASE MOCKUPS -->
