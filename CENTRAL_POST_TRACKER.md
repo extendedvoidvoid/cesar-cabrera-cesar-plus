@@ -21,6 +21,7 @@
 | **Vid 01** | **Chanel Absence Essay** | French / Haute Couture | `/Users/alexphoenix/projects/atelier-synesthesie/video1.mp4` | [video1.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video1.mp4) | `Paris, FR` / `SoHo, NY` | `[ ] Posted` |
 | **Vid 02** | **Saint Laurent Printemps 2026** | French / Fashion Criticism | `/Users/alexphoenix/projects/atelier-synesthesie/video2.mp4` | [video2.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video2.mp4) | `Paris, FR` / `Beverly Hills, CA` | `[ ] Posted` |
 | **Vid 03** | **Kanye West Graduation 2026** | English / Album Analysis | `/Users/alexphoenix/projects/atelier-synesthesie/video3.mp4` | [video3.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video3.mp4) | `SoHo, NY` / `Los Angeles, CA` | `[ ] Posted` |
+| **Vid 04** | **Olivia Rodrigo (Third Album)** | English / Music Criticism | `/Users/alexphoenix/projects/atelier-synesthesie/olivia_rodrigo.mp4` | [olivia_rodrigo.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/olivia_rodrigo.mp4) | `SoHo, NY` / `Los Angeles, CA` | `[ ] Posted` |
 
 ---
 

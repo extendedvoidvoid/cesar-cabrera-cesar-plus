@@ -12,6 +12,7 @@
 | **Vid 01** | Chanel Absence Essay | `video1.mp4` | [video1.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video1.mp4) |
 | **Vid 02** | Saint Laurent Printemps 2026 | `video2.mp4` | [video2.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video2.mp4) |
 | **Vid 03** | Kanye West Graduation 2026 | `video3.mp4` | [video3.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video3.mp4) |
+| **Vid 04** | Olivia Rodrigo Third Album | `olivia_rodrigo.mp4` | [olivia_rodrigo.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/olivia_rodrigo.mp4) |
 
 ---
 
@@ -109,6 +110,38 @@ César+ · Kanye West Graduation (2026 Essay). When Superflat high art met stadi
 Analyse visuelle et culturelle de l'album Graduation (2026). La rencontre entre le mouvement Superflat de Takashi Murakami et l'ambition stadium du hip-hop en 2007. Rendu vertical 1080x1920 avec typographie CÉSAR+ et narration FR/EN.
 
 Visual and cultural analysis of Graduation. Superflat art meeting stadium hip-hop ambition. 1080x1920 vertical format with CÉSAR+ branding and synchronized audio essay.
+```
+
+---
+
+### 📌 Vid 04 — Olivia Rodrigo (Third Album Visual Analysis)
+
+#### YouTube Shorts
+**Title**: `Olivia Rodrigo · Third Album Visual Essay | César+`  
+**Description**:
+```text
+César+ · Olivia Rodrigo Essay. A visual and critical analysis of the third-album sleeve as a signature composition.
+
+Location Tag: SoHo, New York / Los Angeles, CA
+#OliviaRodrigo #CesarPlus #AlbumArt #MusicCriticism #PopCulture
+```
+
+#### Instagram Reel (Mosseri Geo-Targeting Rule)
+**📍 Location Tag**: `SoHo, New York`  
+**Caption**:
+```text
+César+ · Olivia Rodrigo. Analyzing the third-album sleeve as a signature visual composition.
+
+📍 Location: SoHo, New York
+#OliviaRodrigo #CesarPlus #AlbumArt #MusicDesign
+```
+
+#### Facebook / LinkedIn
+**Post Copy**:
+```text
+Analyse visuelle et éditoriale du 3e album d'Olivia Rodrigo. Composition spatiale, typographie dynamique CÉSAR+ et narration podcast audio.
+
+Visual and editorial analysis of Olivia Rodrigo's third album sleeve. Spatial composition, CÉSAR+ dynamic typography, and podcast voiceover.
 ```
 
 ---
