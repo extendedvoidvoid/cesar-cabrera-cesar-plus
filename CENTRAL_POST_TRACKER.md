@@ -18,7 +18,7 @@
 | ID | Title / Channel | Theme / Focus | Local File Path | Live CDN URL | Target Tags | Post Status |
 |----|-----------------|---------------|-----------------|--------------|-------------|-------------|
 | **Ch. 01** | **Olivia Rodrigo (179)** | Beat-synced typography & subtitle alignment | `/Users/alexphoenix/projects/atelier-synesthesie/video1.mp4` | [video1.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video1.mp4) | `@Olivia Rodrigo` `@Geffen Records` `@YouTube` | `[ ] Posted` |
-| **Ch. 02** | **Chanel Cruise Marseille** | Architectural couture motion & luxury pacing | `/Users/alexphoenix/projects/atelier-synesthesie/video2.mp4` | [video2.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video2.mp4) | `@CHANEL` `@Canal+` | `[ ] Posted` |
+| **Ch. 02** | **Chanel Haute Couture & Cannes** | Parallel mapping of runway robes to red carpet appearances | `/Users/alexphoenix/projects/atelier-synesthesie/video2.mp4` | [video2.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video2.mp4) | `@CHANEL` `@Canal+` | `[ ] Posted` |
 | **Ch. 03** | **Kanye West Graduation** | Transient-driven spatial album cover layout | `/Users/alexphoenix/projects/atelier-synesthesie/video3.mp4` | [video3.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video3.mp4) | `@Kanye West` `@Def Jam Recordings` | `[ ] Posted` |
 
 ---
@@ -37,11 +37,11 @@ This is a test of our autonomous media engine, translating @Olivia Rodrigo's aud
 
 ---
 
-### 📌 Ch. 02 — Chanel Cruise Marseille (Couture Motion)
+### 📌 Ch. 02 — Chanel Couture & Cannes (Robes Parallel)
 ```text
-How do you translate the structural geometry of couture into vertical cinematic movement?
+How do you trace the lineage of a silhouette from the runway to the red carpet?
 
-Our rendering engine compiles high-specification visual data variables from the @CHANEL Cruise Marseille collection. It matches architectural rhythm with haute couture pacing, maintaining complete sovereign control over the creative brief and assets.
+We built a visual parallel mapping the robes of the @CHANEL Haute Couture show directly against their physical appearances at the @Canal+ Cannes Film Festival. Our engine compiles these high-specification visual details, enforcing a continuous, sovereign editorial rhythm that links fashion, cinema, and architecture in a single vertical canvas.
 
 🔗 Live Showcase: https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/
 📂 Open-Source Engine: https://github.com/extendedvoidvoid/cesar-cabrera-cesar-plus
