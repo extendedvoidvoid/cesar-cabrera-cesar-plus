@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CraftCut Sovereign Archive Dashboard — "The Sweet Sweet Simulation"</title>
+  <style>
+    :root {
+      --bg: #05070a;
+      --card-bg: rgba(18, 22, 33, 0.7);
+      --border: rgba(30, 38, 51, 0.6);
+      --gold: #d4af37;
+      --gold-glow: rgba(212, 175, 55, 0.2);
+      --neon-green: #10b981;
+      --neon-green-glow: rgba(16, 185, 129, 0.2);
+      --text: #f8fafc;
+      --muted: #64748b;
+      --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(212, 175, 55, 0.05) 0px, transparent 50%);
+      color: var(--text);
+      font-family: var(--font);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Premium Header */
+    .top-bar {
+      height: 70px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(5, 7, 10, 0.8);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .brand h1 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .brand h1 span {
+      color: var(--gold);
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      background: var(--gold-glow);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .system-status {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 13px;
+    }
+
+    .status-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+    }
+
+    .status-item strong {
+      color: var(--text);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--neon-green);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--neon-green);
+    }
+
+    /* Workspace Layout */
+    .workspace {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* Sidebar / Filters */
+    .sidebar {
+      width: 280px;
+      border-right: 1px solid var(--border);
+      background: rgba(10, 14, 22, 0.5);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--muted);
+      text-align: left;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .filter-btn:hover {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text);
+    }
+
+    .filter-btn.active {
+      background: var(--card-bg);
+      border-color: var(--border);
+      color: var(--neon-green);
+    }
+
+    .filter-count {
+      font-size: 11px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--muted);
+      padding: 2px 6px;
+      border-radius: 10px;
+    }
+
+    .filter-btn.active .filter-count {
+      background: var(--neon-green-glow);
+      color: var(--neon-green);
+    }
+
+    /* Main Board */
+    .board {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: rgba(5, 7, 10, 0.3);
+    }
+
+    /* Search and Stats bar */
+    .board-header {
+      height: 70px;
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .search-wrapper {
+      position: relative;
+      width: 400px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(18, 22, 33, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 10px 20px 10px 40px;
+      color: var(--text);
+      font-size: 13px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 10px var(--gold-glow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 14px;
+      pointer-events: none;
+    }
+
+    .scale-metric {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .scale-metric span {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* Grid Area */
+    .content-area {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 450px;
+      overflow: hidden;
+    }
+
+    .archive-list {
+      padding: 40px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Premium Custom Scrollbars */
+    .archive-list::-webkit-scrollbar, .details-panel::-webkit-scrollbar {
+      width: 6px;
+    }
+    .archive-list::-webkit-scrollbar-track, .details-panel::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .archive-list::-webkit-scrollbar-thumb, .details-panel::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 10px;
+    }
+
+    /* Archive Cards */
+    .archive-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .archive-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .archive-card.selected {
+      border-color: var(--neon-green);
+      background: rgba(16, 185, 129, 0.03);
+    }
+
+    .card-left {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .platform-tag {
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .platform-tag.youtube { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+    .platform-tag.linkedin { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+    .platform-tag.facebook { background: rgba(24, 119, 242, 0.15); color: #1877f2; }
+    .platform-tag.instagram { background: rgba(236, 72, 153, 0.15); color: #ec4899; }
+    .platform-tag.tiktok { background: rgba(0, 242, 234, 0.15); color: #00f2ea; }
+
+    .theme-tag {
+      color: var(--muted);
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .card-path {
+      font-size: 11px;
+      font-family: monospace;
+      color: var(--muted);
+    }
+
+    .card-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .status-pill {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+    }
+
+    .status-pill.ready {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--neon-green);
+    }
+
+    .status-pill.draft {
+      background: rgba(245, 158, 11, 0.15);
+      color: #f59e0b;
+    }
+
+    /* Details Panel */
+    .details-panel {
+      border-left: 1px solid var(--border);
+      background: rgba(10, 14, 22, 0.4);
+      padding: 40px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .details-empty {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      text-align: center;
+      gap: 15px;
+    }
+
+    .details-empty-icon {
+      font-size: 36px;
+      color: var(--border);
+    }
+
+    .details-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .details-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .details-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .source-box {
+      background: rgba(18, 22, 33, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .source-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .source-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .source-value {
+      font-size: 12px;
+      font-family: monospace;
+      color: var(--text);
+      word-break: break-all;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.02);
+    }
+
+    /* Clipboard Copy Area */
+    .copy-box {
+      background: rgba(212, 175, 55, 0.02);
+      border: 1px dashed var(--gold);
+      border-radius: 8px;
+      padding: 20px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .copy-box:hover {
+      background: rgba(212, 175, 55, 0.05);
+      border-style: solid;
+    }
+
+    .copy-box-text {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+      margin: 0;
+    }
+
+    .copy-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(5, 7, 10, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .copy-box:hover .copy-overlay {
+      opacity: 1;
+    }
+
+    .copy-action-btn {
+      background: var(--gold);
+      color: #000;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .copy-success-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(16, 185, 129, 0.95);
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      border-radius: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: scale(0.95);
+    }
+
+    .copy-box.copied .copy-success-overlay {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Tag Cloud */
+    .tags-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cloud-tag {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+
+    /* Dynamic Add Entry */
+    .add-action-bar {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-primary {
+      width: 100%;
+      background: var(--gold);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      text-align: center;
+      display: block;
+      box-shadow: 0 4px 15px var(--gold-glow);
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: #ffdf7a;
+      transform: translateY(-1px);
+    }
+
+    /* Interactive modal for adding */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 7, 10, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      border-radius: 16px;
+      width: 550px;
+      max-width: 90%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transform: translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-overlay.active .modal {
+      transform: translateY(0);
+    }
+
+    .modal-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--gold);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-item.full-width {
+      grid-column: span 2;
+    }
+
+    .form-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .form-input {
+      background: rgba(18, 22, 33, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px;
+      color: var(--text);
+      font-size: 12px;
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: var(--gold);
+    }
+
+    .form-textarea {
+      background: rgba(18, 22, 33, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px;
+      color: var(--text);
+      font-size: 12px;
+      outline: none;
+      resize: none;
+      height: 100px;
+    }
+
+    .form-textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .btn-sec {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-sec:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .btn-add {
+      background: var(--neon-green);
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn-add:hover {
+      background: #34d399;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="brand">
+      <h1>CraftCut <span>Sovereign Archive</span></h1>
+      <div class="brand-sub">The Sweet Sweet Simulation</div>
+    </div>
+    <div class="system-status">
+      <div class="status-item">
+        <div class="status-dot"></div>
+        Status: <strong>Active Engine</strong>
+      </div>
+      <div class="status-item">
+        Volume: <strong id="total-vol">64.3M Tokens/Mo</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="workspace">
+    
+    <!-- Sidebar / Filters -->
+    <div class="sidebar">
+      <div>
+        <div class="section-title">Platforms</div>
+        <div class="filter-group" id="platform-filters">
+          <button class="filter-btn active" onclick="filterPlatform('all')">
+            All Platforms <span class="filter-count" id="count-all">0</span>
+          </button>
+          <button class="filter-btn" onclick="filterPlatform('YouTube')">
+            YouTube <span class="filter-count" id="count-yt">0</span>
+          </button>
+          <button class="filter-btn" onclick="filterPlatform('LinkedIn')">
+            LinkedIn <span class="filter-count" id="count-li">0</span>
+          </button>
+          <button class="filter-btn" onclick="filterPlatform('Facebook')">
+            Facebook <span class="filter-count" id="count-fb">0</span>
+          </button>
+          <button class="filter-btn" onclick="filterPlatform('Instagram')">
+            Instagram <span class="filter-count" id="count-ig">0</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="add-action-bar">
+        <button class="btn-primary" onclick="openAddModal()">+ Add New Channel Asset</button>
+      </div>
+    </div>
+
+    <!-- Main Board -->
+    <div class="board">
+      <div class="board-header">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" class="search-input" id="search-input" placeholder="Search archive descriptions, tags, files..." oninput="handleSearch()">
+        </div>
+        <div class="scale-metric">
+          Active target channels: <span id="active-channels-count">0</span>
+        </div>
+      </div>
+
+      <div class="content-area">
+        <!-- List Area -->
+        <div class="archive-list" id="archive-list">
+          <!-- Dynamic cards injected here -->
+        </div>
+
+        <!-- Details Panel -->
+        <div class="details-panel" id="details-panel">
+          <div class="details-empty">
+            <div class="details-empty-icon">📂</div>
+            <div>Select a channel asset to inspect metadata and auto-copy copywriting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Modal -->
+  <div class="modal-overlay" id="add-modal-overlay">
+    <div class="modal">
+      <div class="modal-title">Append New Channel Asset</div>
+      <div class="form-grid">
+        <div class="form-item">
+          <label class="form-label" for="new-id">Channel ID</label>
+          <input type="text" class="form-input" id="new-id" placeholder="CH-006">
+        </div>
+        <div class="form-item">
+          <label class="form-label" for="new-platform">Platform</label>
+          <input type="text" class="form-input" id="new-platform" placeholder="YouTube">
+        </div>
+        <div class="form-item full-width">
+          <label class="form-label" for="new-title">Asset Title</label>
+          <input type="text" class="form-input" id="new-title" placeholder="Kanye West — Life of Pablo Anim">
+        </div>
+        <div class="form-item full-width">
+          <label class="form-label" for="new-local">Local File Path</label>
+          <input type="text" class="form-input" id="new-local" placeholder="/Users/alexphoenix/projects/atelier-synesthesie/video6.mp4">
+        </div>
+        <div class="form-item full-width">
+          <label class="form-label" for="new-cdn">CDN URL</label>
+          <input type="text" class="form-input" id="new-cdn" placeholder="https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video6.mp4">
+        </div>
+        <div class="form-item">
+          <label class="form-label" for="new-theme">Theme / focus</label>
+          <input type="text" class="form-input" id="new-theme" placeholder="Music / Beat-Sync">
+        </div>
+        <div class="form-item">
+          <label class="form-label" for="new-tags">Tags (comma separated)</label>
+          <input type="text" class="form-input" id="new-tags" placeholder="Kanye, Spatial, 9:16">
+        </div>
+        <div class="form-item full-width">
+          <label class="form-label" for="new-desc">Copywriting Description</label>
+          <textarea class="form-textarea" id="new-desc" placeholder="Enter post copy here..."></textarea>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button class="btn-sec" onclick="closeAddModal()">Cancel</button>
+        <button class="btn-add" onclick="addNewItem()">Append to Archive</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let db = [];
+    let currentFilter = 'all';
+    let searchQuery = '';
+    let selectedId = null;
+
+    // Load data
+    async function loadDatabase() {
+      try {
+        const response = await fetch('archive_posts_db.json');
+        db = await response.json();
+        updateCounts();
+        renderList();
+      } catch (error) {
+        console.error("Error loading JSON database. Running fallback mock data.", error);
+        // Fallback mock data in case of direct local viewing without HTTP server
+        db = [
+          {
+            "id": "CH-001",
+            "title": "Olivia Rodrigo — Drivers License Typo",
+            "platform": "YouTube",
+            "theme": "Technical / Music",
+            "local_path": "/Users/alexphoenix/projects/atelier-synesthesie/video1.mp4",
+            "cdn_url": "https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video1.mp4",
+            "description": "Démonstration technique : moteur de rendu vidéo autonome.\nAucun modèle rigide. Les transitoires de la piste audio d'Olivia Rodrigo contrôlent dynamiquement l'affichage, l'alignement et le rythme de la typographie verticalement. Zéro collision d'interface.",
+            "tags": ["Olivia Rodrigo", "Typography", "Motion Design", "CraftCut"],
+            "status": "Ready",
+            "created_at": "2026-08-08"
+          },
+          {
+            "id": "CH-002",
+            "title": "Chanel Haute Couture & Cannes",
+            "platform": "LinkedIn",
+            "theme": "Fashion / Cinema",
+            "local_path": "/Users/alexphoenix/projects/atelier-synesthesie/video2.mp4",
+            "cdn_url": "https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video2.mp4",
+            "description": "Parallèle visuel strict : défilé Haute Couture @CHANEL confronté aux images officielles de @Canal+ au Festival de Cannes.\nAnalyse de la silhouette du podium au tapis rouge. Rythme éditorial précis unissant mode, cinéma et architecture.",
+            "tags": ["CHANEL", "Canal+", "Cannes", "Fashion"],
+            "status": "Ready",
+            "created_at": "2026-08-08"
+          },
+          {
+            "id": "CH-003",
+            "title": "Kanye West Graduation — Sleeves Mapping",
+            "platform": "Facebook",
+            "theme": "Music / Spatial",
+            "local_path": "/Users/alexphoenix/projects/atelier-synesthesie/video3.mp4",
+            "cdn_url": "https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video3.mp4",
+            "description": "Mise en mouvement d'une pochette d'album iconique. Une extraction des fréquences de l'enveloppe audio de @Kanye West mappée sur le mouvement spatial pour donner vie à la pochette.",
+            "tags": ["Kanye West", "Album Art", "Motion Graphics"],
+            "status": "Ready",
+            "created_at": "2026-08-08"
+          }
+        ];
+        updateCounts();
+        renderList();
+      }
+    }
+
+    function updateCounts() {
+      document.getElementById('count-all').textContent = db.length;
+      document.getElementById('count-yt').textContent = db.filter(i => i.platform === 'YouTube').length;
+      document.getElementById('count-li').textContent = db.filter(i => i.platform === 'LinkedIn').length;
+      document.getElementById('count-fb').textContent = db.filter(i => i.platform === 'Facebook').length;
+      document.getElementById('count-ig').textContent = db.filter(i => i.platform === 'Instagram').length;
+      document.getElementById('active-channels-count').textContent = db.length;
+    }
+
+    function renderList() {
+      const container = document.getElementById('archive-list');
+      container.innerHTML = '';
+
+      let filtered = db.filter(item => {
+        const matchesPlatform = currentFilter === 'all' || item.platform.toLowerCase() === currentFilter.toLowerCase();
+        const matchesSearch = searchQuery === '' || 
+          item.title.toLowerCase().includes(searchQuery) ||
+          item.description.toLowerCase().includes(searchQuery) ||
+          item.tags.some(t => t.toLowerCase().includes(searchQuery));
+        return matchesPlatform && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div style="text-align: center; color: var(--muted); padding-top: 50px;">No matching assets found inside simulation.</div>`;
+        return;
+      }
+
+      filtered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = `archive-card ${selectedId === item.id ? 'selected' : ''}`;
+        card.onclick = () => selectItem(item.id);
+
+        card.innerHTML = `
+          <div class="card-left">
+            <div class="card-meta">
+              <span class="platform-tag ${item.platform.toLowerCase()}">${item.platform}</span>
+              <span class="theme-tag">${item.theme}</span>
+            </div>
+            <h3 class="card-title">${item.title}</h3>
+            <span class="card-path">Source: ${item.local_path.split('/').pop()}</span>
+          </div>
+          <div class="card-right">
+            <span class="status-pill ${item.status.toLowerCase()}">${item.status}</span>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function selectItem(id) {
+      selectedId = id;
+      renderList();
+      
+      const item = db.find(i => i.id === id);
+      if (!item) return;
+
+      const panel = document.getElementById('details-panel');
+      panel.innerHTML = `
+        <div class="details-section">
+          <div class="details-title-row">
+            <h2 class="details-title">${item.title}</h2>
+          </div>
+          <div class="card-meta" style="margin-top: 5px;">
+            <span class="platform-tag ${item.platform.toLowerCase()}">${item.platform}</span>
+            <span class="theme-tag">${item.theme}</span>
+            <span class="theme-tag">Created: ${item.created_at}</span>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <div class="section-title">Video Source (Verified Asset)</div>
+          <div class="source-box">
+            <div class="source-item">
+              <div class="source-label">Local System Path</div>
+              <div class="source-value">${item.local_path}</div>
+            </div>
+            <div class="source-item">
+              <div class="source-label">Live CDN URL</div>
+              <div class="source-value">${item.cdn_url}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <div class="section-title">Copywriting (Click Box to Auto-Copy)</div>
+          <div class="copy-box" onclick="copyToClipboard(this, \`${item.description.replace(/`/g, '\\`').replace(/\n/g, '\\n')}\`)">
+            <p class="copy-box-text">${item.description}</p>
+            <div class="copy-overlay">
+              <button class="copy-action-btn">Copy to Clipboard</button>
+            </div>
+            <div class="copy-success-overlay">
+              <span>✓ INELUCTABLE COPYPISTED!</span>
+              <span style="font-size: 11px; font-weight: 500; margin-top: 4px; color: rgba(0,0,0,0.7);">Ready to paste instantly</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <div class="section-title">Simulation Indexing Tags</div>
+          <div class="tags-cloud">
+            ${item.tags.map(t => `<span class="cloud-tag">#${t}</span>`).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function filterPlatform(platform) {
+      currentFilter = platform;
+      const btns = document.querySelectorAll('#platform-filters .filter-btn');
+      btns.forEach(btn => btn.classList.remove('active'));
+      
+      // Determine active button
+      event.currentTarget.classList.add('active');
+      renderList();
+    }
+
+    function handleSearch() {
+      searchQuery = document.getElementById('search-input').value.toLowerCase();
+      renderList();
+    }
+
+    function copyToClipboard(element, text) {
+      navigator.clipboard.writeText(text).then(() => {
+        element.classList.add('copied');
+        setTimeout(() => {
+          element.classList.remove('copied');
+        }, 1500);
+      });
+    }
+
+    // Modal Operations
+    function openAddModal() {
+      document.getElementById('add-modal-overlay').classList.add('active');
+    }
+
+    function closeAddModal() {
+      document.getElementById('add-modal-overlay').classList.remove('active');
+    }
+
+    function addNewItem() {
+      const id = document.getElementById('new-id').value || `CH-00${db.length + 1}`;
+      const platform = document.getElementById('new-platform').value || 'YouTube';
+      const title = document.getElementById('new-title').value || 'Untitled Clip';
+      const local_path = document.getElementById('new-local').value || `/Users/alexphoenix/projects/atelier-synesthesie/video.mp4`;
+      const cdn_url = document.getElementById('new-cdn').value || `https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video.mp4`;
+      const theme = document.getElementById('new-theme').value || 'General';
+      const tagsInput = document.getElementById('new-tags').value || '';
+      const tags = tagsInput.split(',').map(t => t.trim()).filter(t => t);
+      const description = document.getElementById('new-desc').value || '';
+
+      const newItem = {
+        id,
+        title,
+        platform,
+        theme,
+        local_path,
+        cdn_url,
+        description,
+        tags,
+        status: 'Ready',
+        created_at: new Date().toISOString().split('T')[0]
+      };
+
+      db.push(newItem);
+      updateCounts();
+      renderList();
+      closeAddModal();
+      selectItem(id);
+
+      // Trigger automatic save log warning
+      console.log("Appended locally. Write log to raw file to save permanently.");
+    }
+
+    // Initializer
+    window.onload = loadDatabase;
+  </script>
+</body>
+</html>
