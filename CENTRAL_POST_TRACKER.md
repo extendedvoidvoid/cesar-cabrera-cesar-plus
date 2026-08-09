@@ -92,7 +92,7 @@ Critical analysis of Saint Laurent Spring 2026. Architectural study of tailoring
 
 ---
 
-### 📌 Vid 03 — Kanye West Graduation 2026
+### 📌 Vid 03 — Kanye West Graduation (2026 Essay)
 
 #### 🔹 YouTube Shorts / Description
 ```text
@@ -115,4 +115,31 @@ César+ · Kanye West Graduation (2026 Essay). When Superflat high art met stadi
 Analyse visuelle et culturelle de l'album Graduation (2026). La rencontre entre le mouvement Superflat de Takashi Murakami et l'ambition stadium du hip-hop en 2007. Rendu vertical 1080x1920 avec typographie CÉSAR+ et narration FR/EN.
 
 Visual and cultural analysis of Graduation. Superflat art meeting stadium hip-hop ambition. 1080x1920 vertical format with CÉSAR+ branding and synchronized audio essay.
+```
+
+---
+
+### 📌 Vid 04 — Olivia Rodrigo (Third Album 2026)
+
+#### 🔹 YouTube Shorts / Description
+```text
+César+ · Olivia Rodrigo (2026 Essay). In 2026, Olivia Rodrigo's third-album sleeve stands as the physical seal of a maturing pop authority, where Chad Moore's inverted swing composition captures vulnerability and defiance in purple light.
+
+Location Tag: SoHo, New York / Los Angeles, CA
+#OliviaRodrigo #SOUR #GUTS #AlbumArt #CesarPlus
+```
+
+#### 🔹 Instagram Reel Copy
+```text
+César+ · Olivia Rodrigo (2026 Essay). When raw songwriting maturity met Chad Moore's inverted swing photography.
+
+📍 Location: SoHo, New York
+#OliviaRodrigo #SOUR #GUTS #AlbumCover #CesarPlus
+```
+
+#### 🔹 Facebook / LinkedIn Copy
+```text
+Analyse visuelle et éditoriale de la pochette du 3e album d'Olivia Rodrigo (2026). Étude de la composition inversée de Chad Moore, du passage de SOUR et GUTS à une maturité pop affirmée, et de la typographie dynamique CÉSAR+.
+
+Visual and editorial critique of Olivia Rodrigo's third album sleeve (2026). Analyzing Chad Moore's inverted composition, the transition from SOUR/GUTS to mature pop authority, and synchronized CÉSAR+ typography.
 ```
