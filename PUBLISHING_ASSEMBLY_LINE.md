@@ -53,32 +53,16 @@ Technical demonstration: cinematic essay on the aesthetics of silence and absenc
 
 ### 📌 Vid 02 — Saint Laurent Printemps 2026
 
-#### YouTube Shorts
-**Title**: `Saint Laurent Printemps 2026 · Fashion Critique | César+`  
-**Description**:
 ```text
-César+ · Saint Laurent Printemps 2026 Fashion Criticism. An architectural critique of Anthony Vaccarello's tailoring and midnight silhouette.
+Saint Laurent Printemps 2026 par Anthony Vaccarello n'est pas un simple défilé : c'est l'étude architecturale d'une silhouette nocturne et d'une élégance souveraine.
 
-Location Tag: Paris, France / Los Angeles, CA
-#SaintLaurent #YSL #FashionCriticism #ParisFashionWeek #CesarPlus
-```
+Saint Laurent Spring 2026 by Anthony Vaccarello is not a simple fashion show: it is the architectural study of a midnight silhouette and sovereign elegance.
 
-#### Instagram Reel (Mosseri Geo-Targeting Rule)
-**📍 Location Tag**: `Beverly Hills, California`  
-**Caption**:
-```text
-César+ · Saint Laurent Printemps 2026. The architecture of the midnight silhouette and modern tailoring.
+Saint Laurent Primavera 2026 di Anthony Vaccarello non è una semplice sfilata: è lo studio architettonico di una silhouette notturna e di una sovrana eleganza.
 
-📍 Location: Beverly Hills, California
-#SaintLaurent #YSL #PFW #FashionCriticism #CesarPlus
-```
+Saint Laurent Primavera 2026 de Anthony Vaccarello no es un simple desfile: es el estudio arquitectónico de una silueta nocturna y de una elegancia soberana.
 
-#### Facebook / LinkedIn
-**Post Copy**:
-```text
-Analyse critique de la collection Saint Laurent Printemps 2026. Étude de la silhouette, du tailleur nocturne et de la tension architecturale. Voix de critique cinéma/mode et sous-titres karaoké synchronisés.
-
-Critical analysis of Saint Laurent Spring 2026. Architectural study of tailoring and silhouette. Synchronized voiceover and ASS karaoke typography.
+#SaintLaurent #YSL #ParisFashionWeek
 ```
 
 ---
