@@ -22,6 +22,7 @@
 | **Vid 02** | **Saint Laurent Printemps 2026** | French / Fashion Criticism | `/Users/alexphoenix/projects/atelier-synesthesie/video2.mp4` | [video2.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video2.mp4) | `Paris, FR` / `Beverly Hills, CA` | `[ ] Posted` |
 | **Vid 03** | **Kanye West Graduation 2026** | English / Album Analysis | `/Users/alexphoenix/projects/atelier-synesthesie/video3.mp4` | [video3.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video3.mp4) | `SoHo, NY` / `Los Angeles, CA` | `[ ] Posted` |
 | **Vid 04** | **Olivia Rodrigo (Third Album)** | English / Music Criticism | `/Users/alexphoenix/projects/atelier-synesthesie/olivia_rodrigo.mp4` | [olivia_rodrigo.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/olivia_rodrigo.mp4) | `SoHo, NY` / `Los Angeles, CA` | `[ ] Posted` |
+| **Vid 05** | **Nirvana (In Utero 1993)** | English / Album Analysis | `/Users/alexphoenix/projects/atelier-synesthesie/nirvana_in_utero.mp4` | [nirvana_in_utero.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/nirvana_in_utero.mp4) | `SoHo, NY` / `Seattle, WA` | `[ ] Posted` |
 
 ---
 
@@ -120,4 +121,20 @@ La copertina del terzo album di Olivia Rodrigo firmata Chad Moore non è una sem
 La portada del tercer álbum de Olivia Rodrigo por Chad Moore no es una simple fotografía: es el sello visual de una madura autoridad pop.
 
 #OliviaRodrigo #ChadMoore #AlbumCover
+```
+
+---
+
+### 📌 Vid 05 — Nirvana (In Utero 1993)
+
+```text
+La pochette d'In Utero par Robert Fisher n'est pas une simple illustration : c'est le sceau viscéral marquant le refus du mythe commercial par Kurt Cobain.
+
+Nirvana's In Utero sleeve by Robert Fisher is not a simple illustration: it is the visceral seal marking Kurt Cobain's refusal of commercial myth.
+
+La copertina di In Utero di Robert Fisher non è un semplice poster : è il sigillo viscerale che sancisce il rifiuto del mito commerciale da parte di Kurt Cobain.
+
+La portada de In Utero de Robert Fisher no es un simple cartel : es el sello visceral que marca el rechazo del mito commercial por parte de Kurt Cobain.
+
+#Nirvana #InUtero #KurtCobain
 ```
