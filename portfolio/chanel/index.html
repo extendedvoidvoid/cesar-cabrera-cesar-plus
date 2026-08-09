@@ -118,6 +118,45 @@
     }
     .section-intro { color: var(--muted); max-width: 62ch; margin-bottom: 40px; }
 
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin: 32px 0 64px;
+    }
+    .showcase-item h3 {
+      font-family: var(--display);
+      font-size: 24px; font-weight: 400; margin: 0 0 8px;
+    }
+    .showcase-item .tag {
+      display: inline-block;
+      font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid var(--hairline);
+      background: var(--surface);
+      margin-bottom: 12px;
+    }
+    .showcase-item p { color: var(--muted); margin: 0 0 12px; font-size: 14px; line-height: 1.6; }
+    .vertical-embed {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: #000;
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 16px 0 12px;
+    }
+    .vertical-embed video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 860px) {
+      .showcase-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
     .work-grid { display: grid; gap: 64px; }
     .work-item h3 {
       font-family: var(--display);
@@ -639,6 +678,70 @@
       </div>
       <div class="hero-visual">
         <img class="portrait" src="assets/portrait.jpg" alt="César Cabrera" width="320" height="320" />
+      </div>
+    </section>
+
+    <section id="showcase">
+      <p class="section-kicker">Showcase — César+ Vertical 9:16</p>
+      <h2>Essais visuels &amp; séries éditoriales</h2>
+      <p class="section-intro">
+        Trois pièces verticales de la suite <strong>César+</strong> (1080×1920) — narration critique, typographie dynamique synchronisée et habillage sonore souverain.
+      </p>
+
+      <div class="showcase-grid">
+        <article class="showcase-item">
+          <span class="tag">Haute Couture · Essai film</span>
+          <h3>Chanel — L'Absence</h3>
+          <div class="vertical-embed">
+            <video controls playsinline preload="metadata">
+              <source src="../../video1.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video-links">
+            <a href="../../video1.mp4" target="_blank" rel="noopener">▶ Ouvrir MP4</a>
+          </div>
+          <p>Essai cinématique sur l'esthétique du silence et la présence de l'absence dans l'univers Haute Couture de Chanel. Rendu vertical avec typographie CÉSAR+.</p>
+          <div class="credits">
+            <strong>Direction</strong> — Concept, image, typographie &amp; voix<br>
+            <strong>Crédit</strong> — César Cabrera (César+)
+          </div>
+        </article>
+
+        <article class="showcase-item">
+          <span class="tag">Critique Mode · 2026</span>
+          <h3>Saint Laurent — Printemps 2026</h3>
+          <div class="vertical-embed">
+            <video controls playsinline preload="metadata">
+              <source src="../../video2.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video-links">
+            <a href="../../video2.mp4" target="_blank" rel="noopener">▶ Ouvrir MP4</a>
+          </div>
+          <p>Analyse architecturale du tailleur nocturne et de la silhouette d'Anthony Vaccarello. Voix critique française et sous-titres karaoké synchronisés.</p>
+          <div class="credits">
+            <strong>Direction</strong> — Analyse mode, clone vocal FR &amp; typographie<br>
+            <strong>Crédit</strong> — César Cabrera (César+)
+          </div>
+        </article>
+
+        <article class="showcase-item">
+          <span class="tag">Pochette d'Album · 2026</span>
+          <h3>Kanye West — Graduation</h3>
+          <div class="vertical-embed">
+            <video controls playsinline preload="metadata">
+              <source src="../../video3.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="video-links">
+            <a href="../../video3.mp4" target="_blank" rel="noopener">▶ Ouvrir MP4</a>
+          </div>
+          <p>Analyse culturelle et visuelle de la pochette de Takashi Murakami. Rencontre entre l'art contemporain Superflat et l'ambition stadium hip-hop.</p>
+          <div class="credits">
+            <strong>Direction</strong> — Analyse visuelle, clone vocal EN &amp; typographie<br>
+            <strong>Crédit</strong> — César Cabrera (César+)
+          </div>
+        </article>
       </div>
     </section>
 
