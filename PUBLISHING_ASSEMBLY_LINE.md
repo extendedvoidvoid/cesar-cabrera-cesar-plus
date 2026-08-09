@@ -84,64 +84,32 @@ Critical analysis of Saint Laurent Spring 2026. Architectural study of tailoring
 
 ### 📌 Vid 03 — Kanye West Graduation 2026
 
-#### YouTube Shorts
-**Title**: `Kanye West Graduation · Takashi Murakami Superflat Essay | César+`  
-**Description**:
 ```text
-César+ · Kanye West Graduation (2026 Essay). In 2007, hip-hop didn't just change its sound — it changed the room it was allowed to enter. Superflat high-art collaboration with Takashi Murakami.
+La pochette de Graduation par Takashi Murakami n'est pas une simple illustration : c'est le sceau Superflat marquant l'ascension culturelle de Kanye West.
 
-Location Tag: SoHo, New York / Los Angeles, CA
-#KanyeWest #Graduation #TakashiMurakami #AlbumArt #CesarPlus
-```
+Kanye West's Graduation sleeve by Takashi Murakami is not a simple illustration: it is the Superflat seal marking West's cultural ascension.
 
-#### Instagram Reel (Mosseri Geo-Targeting Rule)
-**📍 Location Tag**: `SoHo, New York`  
-**Caption**:
-```text
-César+ · Kanye West Graduation (2026 Essay). When Superflat high art met stadium hip-hop ambition.
+La copertina di Graduation di Takashi Murakami non è un semplice poster : è il sigillo Superflat che sancisce l'ascesa culturale di Kanye West.
 
-📍 Location: SoHo, New York
-#KanyeWest #Graduation #TakashiMurakami #AlbumCover #CesarPlus
-```
+La portada de Graduation de Takashi Murakami no es un simple cartel : es el sello Superflat que marca el ascenso cultural de Kanye West.
 
-#### Facebook / LinkedIn
-**Post Copy**:
-```text
-Analyse visuelle et culturelle de l'album Graduation (2026). La rencontre entre le mouvement Superflat de Takashi Murakami et l'ambition stadium du hip-hop en 2007. Rendu vertical 1080x1920 avec typographie CÉSAR+ et narration FR/EN.
-
-Visual and cultural analysis of Graduation. Superflat art meeting stadium hip-hop ambition. 1080x1920 vertical format with CÉSAR+ branding and synchronized audio essay.
+#KanyeWest #TakashiMurakami #Superflat
 ```
 
 ---
 
-### 📌 Vid 04 — Olivia Rodrigo (Third Album Visual Analysis)
+### 📌 Vid 04 — Olivia Rodrigo (Third Album)
 
-#### YouTube Shorts
-**Title**: `Olivia Rodrigo · Third Album Visual Essay | César+`  
-**Description**:
 ```text
-César+ · Olivia Rodrigo Essay. A visual and critical analysis of the third-album sleeve as a signature composition.
+La pochette du troisième album d'Olivia Rodrigo par Chad Moore n'est pas une simple photographie : c'est le sceau visuel d'une maturité pop affirmée.
 
-Location Tag: SoHo, New York / Los Angeles, CA
-#OliviaRodrigo #CesarPlus #AlbumArt #MusicCriticism #PopCulture
-```
+Olivia Rodrigo's third album sleeve by Chad Moore is not a simple photograph: it is the visual seal of a maturing pop authority.
 
-#### Instagram Reel (Mosseri Geo-Targeting Rule)
-**📍 Location Tag**: `SoHo, New York`  
-**Caption**:
-```text
-César+ · Olivia Rodrigo. Analyzing the third-album sleeve as a signature visual composition.
+La copertina del terzo album di Olivia Rodrigo firmata Chad Moore non è una semplice fotografia: è il sigillo visivo di una matura autorità pop.
 
-📍 Location: SoHo, New York
-#OliviaRodrigo #CesarPlus #AlbumArt #MusicDesign
-```
+La portada del tercer álbum de Olivia Rodrigo por Chad Moore no es una simple fotografía: es el sello visual de una madura autoridad pop.
 
-#### Facebook / LinkedIn
-**Post Copy**:
-```text
-Analyse visuelle et éditoriale du 3e album d'Olivia Rodrigo. Composition spatiale, typographie dynamique CÉSAR+ et narration podcast audio.
-
-Visual and editorial analysis of Olivia Rodrigo's third album sleeve. Spatial composition, CÉSAR+ dynamic typography, and podcast voiceover.
+#OliviaRodrigo #ChadMoore #AlbumCover
 ```
 
 ---
