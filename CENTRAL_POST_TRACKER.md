@@ -144,3 +144,8 @@ El desfile de Louis Vuitton de Marc Jacobs no es un simple espectáculo: es el t
 
 #LouisVuitton #KateMoss #MarcJacobs
 ```
+
+#### 👁️ Qwen 1 FPS Vision QC Verification Summary
+- **T=0s–12s**: Dark opening stage ambience + yellow karaoke subtitles.
+- **T=20s–38s**: Steam locomotive entrance & station platform verified by Qwen VL.
+- **T=40s–60s**: Carousel & runway sequence with `César+` logo and bottom title card `LOUIS VUITTON · MARC JACOBS & KATE MOSS · PARIS`.
