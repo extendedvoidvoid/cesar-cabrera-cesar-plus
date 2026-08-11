@@ -23,6 +23,7 @@
 | **Vid 03** | **Kanye West Graduation 2026** | English / Album Analysis | `/Users/alexphoenix/projects/atelier-synesthesie/video3.mp4` | [video3.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/video3.mp4) | `SoHo, NY` / `Los Angeles, CA` | `[ ] Posted` |
 | **Vid 04** | **Olivia Rodrigo (Third Album)** | English / Music Criticism | `/Users/alexphoenix/projects/atelier-synesthesie/olivia_rodrigo.mp4` | [olivia_rodrigo.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/olivia_rodrigo.mp4) | `SoHo, NY` / `Los Angeles, CA` | `[ ] Posted` |
 | **Vid 05** | **Nirvana (In Utero 1993)** | English / Album Analysis | `/Users/alexphoenix/projects/atelier-synesthesie/nirvana_in_utero.mp4` | [nirvana_in_utero.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/nirvana_in_utero.mp4) | `SoHo, NY` / `Seattle, WA` | `[ ] Posted` |
+| **Vid 06** | **Louis Vuitton (Marc Jacobs & Kate Moss)** | English / Fashion Criticism | `/Users/alexphoenix/projects/atelier-synesthesie/louis_vuitton_kate_moss.mp4` | [louis_vuitton_kate_moss.mp4](https://extendedvoidvoid.github.io/cesar-cabrera-cesar-plus/louis_vuitton_kate_moss.mp4) | `Paris, FR` / `SoHo, NY` | `[ ] Posted` |
 
 ---
 
@@ -126,4 +127,20 @@ La copertina di In Utero di Robert Fisher non è un semplice poster : è il sigi
 La portada de In Utero de Robert Fisher no es un simple cartel : es el sello visceral que marca el rechazo del mito commercial por parte de Kurt Cobain.
 
 #Nirvana #InUtero #KurtCobain
+```
+
+---
+
+### 📌 Vid 06 — Louis Vuitton (Marc Jacobs & Kate Moss)
+
+```text
+Le défilé Louis Vuitton par Marc Jacobs n'est pas un simple spectacle : c'est le théâtre d'une sensualité glacée incarnée par Kate Moss.
+
+Marc Jacobs's Louis Vuitton show is not a simple spectacle: it is the theater of a frigid sensuality embodied by Kate Moss.
+
+La sfilata Louis Vuitton di Marc Jacobs non è un semplice spettacolo : è il teatro di una sensualità glaciale incarnata da Kate Moss.
+
+El desfile de Louis Vuitton de Marc Jacobs no es un simple espectáculo: es el teatro de una sensualidad gélida encarnada por Kate Moss.
+
+#LouisVuitton #KateMoss #MarcJacobs
 ```
